@@ -1,0 +1,2198 @@
+<!DOCTYPE html>
+<html lang="id" class="text-size-base">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arum Dahlia — AI-Assisted Web Developer &amp; Founder LYONESSE</title>
+  <meta name="description" content="Portofolio resmi Arum Dahlia — Lulusan Akuntansi SMK Negeri 2 Blora 2025, AI-Assisted Web Developer, dan Founder Brand Clothing LYONESSE." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-display: "Outfit", system-ui, sans-serif;
+      --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+      --stone-50: #fafaf9;
+      --stone-100: #f5f5f4;
+      --stone-200: #e7e5e4;
+      --stone-300: #d6d3d1;
+      --stone-400: #a8a29e;
+      --stone-500: #78716c;
+      --stone-600: #57534e;
+      --stone-700: #44403c;
+      --stone-800: #292524;
+      --stone-900: #1c1917;
+      --stone-950: #0c0a09;
+      --emerald-50: #ecfdf5;
+      --emerald-100: #d1fae5;
+      --emerald-200: #a7f3d0;
+      --emerald-300: #6ee7b7;
+      --emerald-400: #34d399;
+      --emerald-600: #059669;
+      --emerald-700: #047857;
+      --emerald-800: #065f46;
+      --amber-50: #fffbeb;
+      --amber-200: #fde68a;
+      --amber-300: #fcd34d;
+      --amber-400: #fbbf24;
+      --amber-700: #b45309;
+      --amber-800: #92400e;
+      --amber-900: #78350f;
+      --amber-950: #451a03;
+      --rose-50: #fff1f2;
+      --rose-200: #fecdd3;
+      --rose-300: #fda4af;
+      --rose-400: #fb7185;
+      --rose-600: #e11d48;
+      --rose-700: #be123c;
+      --rose-800: #9f1239;
+      --blue-50: #eff6ff;
+      --blue-300: #93c5fd;
+      --blue-400: #60a5fa;
+      --blue-800: #1e40af;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    html.text-size-sm { font-size: 14px; }
+    html.text-size-base { font-size: 16px; }
+    html.text-size-lg { font-size: 18px; }
+
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      background-color: #ffffff;
+      color: var(--stone-900);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      transition: font-size 0.2s ease;
+    }
+
+    h1, h2, h3, h4, .font-display { font-family: var(--font-display); margin: 0; }
+    p { margin: 0; }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; border: none; background: none; padding: 0; cursor: pointer; color: inherit; }
+    .font-mono { font-family: var(--font-mono); }
+    .font-serif { font-family: Georgia, Cambria, "Times New Roman", serif; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    .hidden { display: none !important; }
+
+    /* Scroll Progress Bar */
+    .scroll-progress-wrap {
+      position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 60;
+      background: transparent; pointer-events: none;
+    }
+    .scroll-progress-fill {
+      height: 100%; width: 0%; background: var(--stone-900);
+      transition: width 0.08s linear;
+    }
+
+    /* Container */
+    .container {
+      width: 100%; max-width: 72rem; margin: 0 auto; padding-left: 1rem; padding-right: 1rem;
+    }
+    @media (min-width: 640px) { .container { padding-left: 1.5rem; padding-right: 1.5rem; } }
+    @media (min-width: 1024px) { .container { padding-left: 2rem; padding-right: 2rem; } }
+
+    /* Header / Navbar */
+    .navbar {
+      position: sticky; top: 0; z-index: 40;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--stone-200);
+    }
+    .navbar-inner {
+      height: 4rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
+    }
+    .brand-wordmark {
+      font-family: var(--font-display); font-size: 1.125rem; font-weight: 700;
+      letter-spacing: -0.02em; color: var(--stone-900); white-space: nowrap;
+    }
+    .brand-wordmark:hover { color: var(--stone-700); }
+    .nav-links-desktop {
+      display: none; align-items: center; gap: 1.25rem; font-size: 0.75rem; font-weight: 600;
+    }
+    .nav-link {
+      padding: 0.25rem 0; border-bottom: 2px solid transparent; color: var(--stone-500);
+      transition: color 0.15s, border-color 0.15s; white-space: nowrap;
+    }
+    .nav-link:hover { color: var(--stone-900); border-bottom-color: var(--stone-300); }
+    .nav-link.active { color: var(--stone-900); border-bottom-color: var(--stone-900); }
+
+    .nav-actions { display: none; align-items: center; gap: 0.75rem; }
+    .btn-ghost-sm {
+      padding: 0.375rem 0.75rem; font-size: 0.75rem; font-weight: 500;
+      color: var(--stone-600); border-radius: 0.5rem; transition: background 0.15s, color 0.15s;
+      white-space: nowrap;
+    }
+    .btn-ghost-sm:hover { background: var(--stone-50); color: var(--stone-900); }
+    .btn-dark-sm {
+      padding: 0.5rem 1rem; font-size: 0.75rem; font-weight: 600;
+      background: var(--stone-900); color: #fff; border-radius: 0.5rem;
+      transition: background 0.15s; white-space: nowrap;
+    }
+    .btn-dark-sm:hover { background: var(--stone-800); }
+    .btn-dark-sm.active-ring { background: var(--stone-700); box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--stone-900); }
+
+    .mobile-menu-btn {
+      padding: 0.5rem; color: var(--stone-600); border-radius: 0.5rem;
+      display: inline-flex; align-items: center; justify-content: center;
+    }
+    .mobile-menu-panel {
+      border-bottom: 1px solid var(--stone-200); background: #fff;
+      padding: 0.5rem 1rem 1.25rem; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    }
+    .mobile-nav-list { display: flex; flex-direction: column; gap: 0.25rem; margin-bottom: 0.75rem; }
+    .mobile-nav-link {
+      display: block; padding: 0.5rem 0.75rem; border-radius: 0.5rem; font-size: 0.875rem;
+      font-weight: 500; color: var(--stone-700);
+    }
+    .mobile-nav-link:hover { background: var(--stone-100); color: var(--stone-900); }
+    .mobile-nav-link.active { background: var(--stone-900); color: #fff; font-weight: 600; }
+
+    @media (min-width: 640px) { .nav-actions { display: flex; } }
+    @media (min-width: 1024px) {
+      .nav-links-desktop { display: flex; }
+      .mobile-menu-btn, .mobile-menu-panel { display: none !important; }
+    }
+
+    /* Main & Breadcrumb */
+    main { flex: 1; display: flex; flex-direction: column; }
+    .breadcrumb-bar { background: var(--stone-50); border-bottom: 1px solid var(--stone-200); }
+    .breadcrumb-inner {
+      padding-top: 0.75rem; padding-bottom: 0.75rem;
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 0.75rem; font-size: 0.75rem;
+    }
+    .breadcrumb-trail { display: flex; align-items: center; gap: 0.5rem; color: var(--stone-600); }
+    .breadcrumb-home {
+      display: inline-flex; align-items: center; gap: 0.375rem; font-weight: 600; color: var(--stone-700);
+    }
+    .breadcrumb-home:hover { color: var(--stone-900); }
+
+    /* Page Sections */
+    .page-section { display: none; padding: 3rem 0 4rem; }
+    .page-section.active { display: block; }
+    .bg-white { background-color: #ffffff; }
+    .bg-stone { background-color: var(--stone-50); }
+
+    /* Typography helpers */
+    .kicker {
+      font-size: 0.75rem; font-weight: 600; color: var(--stone-600);
+      letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .hero-meta {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem;
+      font-size: 0.75rem; font-weight: 500; color: var(--stone-500);
+    }
+    .hero-title {
+      font-size: 1.875rem; font-weight: 800; line-height: 1.12; letter-spacing: -0.025em;
+      color: var(--stone-900);
+    }
+    .section-title {
+      font-size: 1.5rem; font-weight: 800; line-height: 1.18; letter-spacing: -0.02em;
+      color: var(--stone-900);
+    }
+    .lead-text { font-size: 0.9375rem; color: var(--stone-600); line-height: 1.65; }
+    @media (min-width: 640px) {
+      .hero-title { font-size: 2.35rem; }
+      .section-title { font-size: 2rem; }
+      .lead-text { font-size: 1rem; }
+    }
+    @media (min-width: 1024px) {
+      .hero-title { font-size: 2.85rem; }
+      .section-title { font-size: 2.25rem; }
+    }
+
+    /* Grids */
+    .grid { display: grid; gap: 1.5rem; }
+    .grid-2 { grid-template-columns: 1fr; }
+    .grid-3 { grid-template-columns: 1fr; }
+    .grid-4 { grid-template-columns: 1fr; }
+    .grid-12 { grid-template-columns: 1fr; }
+    .grid-7 { grid-template-columns: repeat(2, 1fr); gap: 0.625rem; }
+    @media (min-width: 640px) {
+      .grid-2-sm { grid-template-columns: repeat(2, 1fr); }
+      .grid-7 { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (min-width: 768px) {
+      .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .grid-3 { grid-template-columns: repeat(3, 1fr); }
+      .grid-4 { grid-template-columns: repeat(4, 1fr); }
+      .grid-12 { grid-template-columns: repeat(12, 1fr); gap: 2rem; }
+      .col-span-5 { grid-column: span 5 / span 5; }
+      .col-span-7 { grid-column: span 7 / span 7; }
+      .grid-7 { grid-template-columns: repeat(7, 1fr); }
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+      font-size: 0.8125rem; font-weight: 600; border-radius: 0.5rem;
+      padding: 0.625rem 1.125rem; transition: all 0.15s; white-space: nowrap;
+    }
+    .btn-primary { background: var(--stone-900); color: #fff; }
+    .btn-primary:hover { background: var(--stone-800); }
+    .btn-outline { background: #fff; color: var(--stone-800); border: 1px solid var(--stone-300); }
+    .btn-outline:hover { background: var(--stone-50); }
+    .btn-subtle { background: transparent; color: var(--stone-600); padding: 0.625rem 0.875rem; }
+    .btn-subtle:hover { background: var(--stone-50); color: var(--stone-900); }
+
+    /* Cards */
+    .card {
+      background: #fff; border: 1px solid var(--stone-200); border-radius: 1rem; padding: 1.25rem;
+    }
+    .card-stone {
+      background: var(--stone-50); border: 1px solid var(--stone-200); border-radius: 1rem; padding: 1.25rem;
+    }
+    .card-lg { padding: 1.5rem; }
+    @media (min-width: 640px) { .card-lg { padding: 2rem; } }
+
+    /* Code Console (Dark) */
+    .console {
+      background: var(--stone-900); color: var(--stone-100); border: 1px solid var(--stone-300);
+      border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      font-family: var(--font-mono); font-size: 0.75rem;
+    }
+    .console-header {
+      background: var(--stone-950); border-bottom: 1px solid var(--stone-800);
+      padding: 0.75rem 1rem; display: flex; flex-wrap: wrap; align-items: center;
+      justify-content: space-between; gap: 0.5rem;
+    }
+    .console-dots { display: flex; align-items: center; gap: 0.375rem; }
+    .console-dot { width: 0.6875rem; height: 0.6875rem; border-radius: 9999px; background: var(--stone-700); display: inline-block; }
+    .console-tab {
+      padding: 0.25rem 0.625rem; border-radius: 0.25rem; font-size: 0.6875rem;
+      color: var(--stone-400); transition: all 0.15s;
+    }
+    .console-tab:hover { color: var(--stone-200); }
+    .console-tab.active { background: var(--stone-800); color: #fff; font-weight: 600; }
+    .console-body { padding: 1.25rem; min-height: 245px; overflow-x: auto; line-height: 1.65; }
+    .console-footer {
+      background: var(--stone-950); border-top: 1px solid var(--stone-800);
+      padding: 0.5rem 1rem; display: flex; align-items: center; justify-content: space-between;
+      font-size: 0.6875rem; color: var(--stone-400);
+    }
+
+    /* Quick Jump Cards */
+    .jump-card {
+      padding: 0.75rem; border-radius: 0.75rem; border: 1px solid var(--stone-200);
+      background: var(--stone-50); display: flex; flex-direction: column; justify-content: space-between;
+      transition: all 0.15s; text-align: left;
+    }
+    .jump-card:hover { background: var(--stone-100); border-color: var(--stone-400); }
+    .jump-card.active { background: var(--stone-900); border-color: var(--stone-900); color: #fff; }
+    .jump-icon {
+      width: 1.5rem; height: 1.5rem; border-radius: 0.375rem; border: 1px solid var(--stone-200);
+      background: #fff; color: var(--stone-800); display: inline-flex; align-items: center; justify-content: center;
+    }
+    .jump-card.active .jump-icon { background: var(--stone-800); border-color: var(--stone-700); color: #fff; }
+
+    /* Calculator & Sliders */
+    .guide-banner {
+      padding: 1.25rem; background: var(--stone-50); border: 2px solid var(--stone-900);
+      border-radius: 1rem; margin-bottom: 1.75rem;
+    }
+    .preset-box {
+      padding: 1rem; background: var(--stone-100); border: 1px solid var(--stone-300);
+      border-radius: 0.875rem; margin-bottom: 1.5rem;
+    }
+    .preset-btn {
+      padding: 0.75rem; border-radius: 0.625rem; border: 1px solid var(--stone-200);
+      background: rgba(250, 250, 249, 0.85); text-align: left; width: 100%; transition: all 0.15s;
+    }
+    .preset-btn:hover { background: #fff; }
+    .preset-btn.active { background: #fff; border-color: var(--stone-900); box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+
+    .health-card {
+      padding: 1.25rem; border-radius: 1rem; border: 1px solid; margin-bottom: 1.5rem;
+      transition: all 0.2s ease;
+    }
+    .health-healthy { background: var(--emerald-50); border-color: var(--emerald-300); color: var(--emerald-800); }
+    .health-moderate { background: var(--blue-50); border-color: var(--blue-300); color: var(--blue-800); }
+    .health-warning { background: var(--amber-50); border-color: var(--amber-300); color: var(--amber-900); }
+    .health-danger { background: var(--rose-50); border-color: var(--rose-300); color: var(--rose-700); }
+
+    .slide-strip-banner {
+      padding: 0.875rem 1rem; background: var(--stone-100); border: 1px solid var(--stone-300);
+      border-radius: 0.75rem; margin-bottom: 1rem; display: flex; flex-wrap: wrap;
+      align-items: center; justify-content: space-between; gap: 0.75rem; font-size: 0.75rem;
+    }
+    .tabs-bar {
+      display: flex; align-items: center; gap: 0.25rem; border-bottom: 1px solid var(--stone-200);
+      margin-bottom: 2rem; overflow-x: auto; padding-bottom: 0.25rem;
+    }
+    .tab-btn {
+      padding: 0.5rem 0.75rem 0.625rem; font-size: 0.8125rem; font-weight: 600;
+      border-bottom: 2px solid transparent; color: var(--stone-500); white-space: nowrap;
+      display: inline-flex; align-items: center; gap: 0.375rem; transition: all 0.15s;
+    }
+    .tab-btn:hover { color: var(--stone-800); }
+    .tab-btn.active { border-bottom-color: var(--stone-900); color: var(--stone-900); }
+
+    input[type="range"] {
+      width: 100%; accent-color: var(--stone-900); cursor: pointer; height: 6px;
+    }
+    .slider-sub input[type="range"] { accent-color: var(--stone-700); }
+    .val-pill {
+      font-family: var(--font-mono); font-size: 0.8125rem; font-weight: 700;
+      color: var(--stone-900); background: #fff; padding: 0.125rem 0.625rem;
+      border: 1px solid var(--stone-300); border-radius: 0.375rem;
+    }
+
+    .bep-dark-card {
+      padding: 1.5rem; background: var(--stone-900); color: #fff; border-radius: 1rem;
+      border: 1px solid var(--stone-800);
+    }
+
+    /* Tables */
+    .table-wrap {
+      overflow-x: auto; border: 1px solid var(--stone-200); border-radius: 0.75rem; background: #fff;
+    }
+    table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.8125rem; }
+    thead { background: var(--stone-50); border-bottom: 1px solid var(--stone-200); color: var(--stone-600); }
+    th, td { padding: 0.75rem 1rem; }
+    tbody tr { border-bottom: 1px solid var(--stone-100); }
+    tbody tr:hover { background: rgba(250, 250, 249, 0.7); }
+    tfoot { background: var(--stone-100); border-top: 2px solid var(--stone-300); font-weight: 700; }
+    .text-right { text-align: right; }
+
+    /* Book Cards */
+    .book-card {
+      padding: 1.75rem; border-radius: 1rem; border: 1px solid var(--stone-200); background: #fff;
+      cursor: pointer; display: flex; flex-direction: column; justify-content: space-between;
+      transition: all 0.15s;
+    }
+    .book-card:hover { border-color: var(--stone-400); }
+    .book-card.selected { background: var(--stone-50); border-color: var(--stone-900); box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+
+    /* Form Controls */
+    .input-field {
+      width: 100%; padding: 0.625rem 0.875rem; background: var(--stone-50);
+      border: 1px solid var(--stone-300); border-radius: 0.5rem; font-family: inherit;
+      font-size: 0.875rem; color: var(--stone-900); transition: all 0.15s;
+    }
+    .input-field:focus {
+      outline: none; background: #fff; border-color: var(--stone-900);
+      box-shadow: 0 0 0 1px var(--stone-900);
+    }
+
+    /* Bottom Mini-Navigation Bar */
+    .bottom-nav-wrap { background: #fff; border-top: 1px solid var(--stone-200); }
+    .bottom-nav-inner { padding: 1.25rem 0; font-size: 0.75rem; }
+    .mini-page-btn {
+      padding: 0.375rem 0.625rem; border-radius: 0.5rem; border: 1px solid var(--stone-200);
+      background: var(--stone-50); color: var(--stone-700); font-size: 0.75rem; font-weight: 500;
+      display: inline-flex; align-items: center; gap: 0.375rem; white-space: nowrap;
+      transition: all 0.15s;
+    }
+    .mini-page-btn:hover { background: var(--stone-100); border-color: var(--stone-400); color: var(--stone-900); }
+    .mini-page-btn.active { background: var(--stone-900); color: #fff; border-color: var(--stone-900); font-weight: 600; }
+
+    /* Footer */
+    footer {
+      background: var(--stone-900); color: var(--stone-300); padding: 3rem 0 6rem;
+      border-top: 1px solid var(--stone-800); font-size: 0.75rem;
+    }
+    footer a:hover, footer button:hover { color: #fff; }
+
+    /* Floating Tools Bar */
+    .tools-bar-wrap {
+      position: fixed; bottom: 1rem; left: 50%; transform: translateX(-50%); z-index: 40;
+      width: 94%; max-width: fit-content;
+    }
+    .tools-bar {
+      display: flex; align-items: center; gap: 0.375rem; padding: 0.5rem 0.75rem;
+      background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(10px);
+      border: 1px solid var(--stone-300); border-radius: 0.875rem;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12); color: var(--stone-900);
+      overflow-x: auto;
+    }
+    .tool-chip {
+      display: inline-flex; align-items: center; gap: 0.375rem; padding: 0.375rem 0.625rem;
+      border-radius: 0.5rem; background: var(--stone-100); border: 1px solid var(--stone-200);
+      color: var(--stone-700); font-size: 0.75rem; font-weight: 500; white-space: nowrap;
+      transition: all 0.15s;
+    }
+    .tool-chip:hover { background: var(--stone-200); color: var(--stone-900); }
+    .tool-chip.active { background: var(--stone-900); color: #fff; border-color: var(--stone-900); }
+    .font-toggle-group {
+      display: inline-flex; align-items: center; background: var(--stone-100);
+      border: 1px solid var(--stone-200); border-radius: 0.5rem; padding: 2px;
+    }
+    .font-toggle-btn {
+      padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; border-radius: 0.375rem;
+      color: var(--stone-600);
+    }
+    .font-toggle-btn.active { background: var(--stone-900); color: #fff; }
+
+    /* Reading Focus Ruler */
+    .reading-ruler {
+      pointer-events: none; position: fixed; left: 0; right: 0; height: 42px;
+      background: rgba(245, 158, 11, 0.09);
+      border-top: 1.5px dashed rgba(217, 119, 6, 0.45);
+      border-bottom: 1.5px dashed rgba(217, 119, 6, 0.45);
+      z-index: 9999; box-shadow: 0 0 20px rgba(245, 158, 11, 0.1);
+      transform: translateY(-50%); display: none;
+    }
+    .reading-ruler.active { display: block; }
+
+    /* Modals */
+    .modal-backdrop {
+      position: fixed; inset: 0; z-index: 50; background: rgba(12, 10, 9, 0.7);
+      backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center;
+      padding: 1rem; overflow-y: auto;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal-backdrop.align-top { align-items: flex-start; padding-top: 5rem; }
+    .modal-card {
+      background: #fff; width: 100%; border-radius: 1rem; border: 1px solid var(--stone-300);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.25); overflow: hidden;
+    }
+
+    /* Utility spacing & badges */
+    .badge {
+      display: inline-block; font-family: var(--font-mono); font-size: 0.6875rem; font-weight: 700;
+      padding: 0.125rem 0.5rem; border-radius: 0.375rem;
+    }
+    .badge-stone { background: var(--stone-200); color: var(--stone-900); }
+    .badge-dark { background: var(--stone-900); color: #fff; }
+    .badge-emerald { background: var(--emerald-100); color: var(--emerald-800); }
+    .flex-between { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; }
+    .stack-xs > * + * { margin-top: 0.5rem; }
+    .stack-sm > * + * { margin-top: 0.75rem; }
+    .stack-md > * + * { margin-top: 1.25rem; }
+    .stack-lg > * + * { margin-top: 2rem; }
+
+    @media print {
+      header, .scroll-progress-wrap, .breadcrumb-bar, .bottom-nav-wrap, footer, .tools-bar-wrap, .reading-ruler, .no-print, #search-modal, main {
+        display: none !important;
+      }
+      #resume-modal {
+        position: static !important; background: #fff !important; padding: 0 !important; display: block !important;
+      }
+      #resume-modal .modal-card {
+        border: none !important; box-shadow: none !important; max-height: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-wrap" aria-hidden="true">
+    <div id="scroll-progress" class="scroll-progress-fill"></div>
+  </div>
+
+  <!-- Reading Focus Ruler -->
+  <div id="reading-ruler" class="reading-ruler" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="#/profil" class="brand-wordmark" data-nav="profil">Arum Dahlia</a>
+
+      <nav class="nav-links-desktop" aria-label="Navigasi Halaman Utama">
+        <a href="#/profil" class="nav-link active" data-nav="profil">Profil</a>
+        <a href="#/fokus-ai" class="nav-link" data-nav="fokus-ai">Fokus AI</a>
+        <a href="#/lyonesse" class="nav-link" data-nav="lyonesse">LYONESSE</a>
+        <a href="#/kalkulator" class="nav-link" data-nav="kalkulator">Kalkulator</a>
+        <a href="#/prestasi" class="nav-link" data-nav="prestasi">Prestasi</a>
+        <a href="#/buku" class="nav-link" data-nav="buku">Buku</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="btn-ghost-sm" id="open-resume-nav">Lihat CV</button>
+        <a href="#/kontak" class="btn-dark-sm" data-nav="kontak" id="nav-cta-kontak">Hubungi / Kolaborasi</a>
+      </div>
+
+      <button type="button" class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Buka menu navigasi">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu-panel" class="mobile-menu-panel hidden">
+      <nav class="mobile-nav-list">
+        <a href="#/profil" class="mobile-nav-link active" data-nav="profil">Profil</a>
+        <a href="#/fokus-ai" class="mobile-nav-link" data-nav="fokus-ai">Fokus AI</a>
+        <a href="#/lyonesse" class="mobile-nav-link" data-nav="lyonesse">LYONESSE</a>
+        <a href="#/kalkulator" class="mobile-nav-link" data-nav="kalkulator">Kalkulator</a>
+        <a href="#/prestasi" class="mobile-nav-link" data-nav="prestasi">Prestasi</a>
+        <a href="#/buku" class="mobile-nav-link" data-nav="buku">Buku</a>
+      </nav>
+      <div class="stack-xs" style="padding-top:0.75rem; border-top:1px solid var(--stone-100);">
+        <button type="button" id="open-resume-mobile" class="btn btn-outline" style="width:100%; background:var(--stone-100); border:none;">Lihat Ringkasan CV</button>
+        <a href="#/kontak" class="btn btn-primary" style="width:100%;" data-nav="kontak">Hubungi Saya</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sub-page Breadcrumb -->
+    <div id="breadcrumb-bar" class="breadcrumb-bar hidden">
+      <div class="container breadcrumb-inner">
+        <div class="breadcrumb-trail">
+          <button type="button" class="breadcrumb-home" data-nav="profil">
+            <span>⌂ Ringkasan Profil</span>
+          </button>
+          <span aria-hidden="true">/</span>
+          <strong id="breadcrumb-current" style="color:var(--stone-900);"></strong>
+        </div>
+        <span id="breadcrumb-counter" class="font-mono" style="font-size:0.6875rem; color:var(--stone-500);"></span>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE 01: RINGKASAN PROFIL ==================== -->
+    <section id="page-profil" class="page-section bg-white active">
+      <div class="container">
+        <div class="grid grid-12" style="align-items:center; margin-bottom:3rem;">
+          <div class="col-span-7 stack-md">
+            <div class="hero-meta">
+              <strong style="color:var(--stone-900);">Arum Dahlia</strong>
+              <span>·</span>
+              <span>AI-Assisted Web Developer</span>
+              <span>·</span>
+              <strong style="color:var(--stone-800);">Founder LYONESSE</strong>
+              <span>·</span>
+              <span>Blora, Indonesia</span>
+            </div>
+
+            <h1 class="hero-title">
+              Membangun Web &amp; Ekosistem Bisnis Nyata dengan AI sebagai Partner.
+            </h1>
+
+            <p class="lead-text" style="max-width:42rem;">
+              Bukan berlatar belakang pendidikan IT formal, melainkan lulusan Akuntansi SMK Negeri 2 Blora tahun 2025 yang memanfaatkan kecerdasan buatan sebagai rekan bertukar ide, pemecah masalah, dan partner membangun produk digital. Saat ini fokus sebagai <strong>Founder</strong> brand clothing <strong>LYONESSE</strong> berbahan <em>Cotton Combed 20s &amp; 16s</em>, serta mendalami keuangan digital dan web development modern.
+            </p>
+
+            <div style="display:flex; flex-wrap:wrap; align-items:center; gap:0.75rem; padding-top:0.25rem;">
+              <a href="#/kalkulator" class="btn btn-primary" data-nav="kalkulator">Buka Kalkulator BEP &amp; HPP</a>
+              <a href="#/lyonesse" class="btn btn-outline" data-nav="lyonesse">Brand LYONESSE</a>
+              <button type="button" class="btn btn-subtle" id="open-resume-hero">Ringkasan CV</button>
+            </div>
+          </div>
+
+          <!-- Interactive Code Console -->
+          <div class="col-span-5">
+            <div class="console">
+              <div class="console-header">
+                <div class="console-dots">
+                  <span class="console-dot"></span>
+                  <span class="console-dot"></span>
+                  <span class="console-dot"></span>
+                  <span style="color:var(--stone-400); font-size:0.6875rem; margin-left:0.5rem;">arum-dahlia-workspace</span>
+                </div>
+                <div style="display:flex; gap:0.25rem;">
+                  <button type="button" class="console-tab active" data-code-tab="architecture">lyonesse.ts</button>
+                  <button type="button" class="console-tab" data-code-tab="economics">bep.calc.ts</button>
+                  <button type="button" class="console-tab" data-code-tab="aiPrompt">ai-partner.md</button>
+                </div>
+              </div>
+
+              <div class="console-body" id="console-body"></div>
+
+              <div class="console-footer">
+                <div style="display:flex; align-items:center; gap:0.5rem;">
+                  <span style="width:8px; height:8px; border-radius:9999px; background:var(--emerald-400); display:inline-block;"></span>
+                  <span>Interactive Engine: Active</span>
+                </div>
+                <span>Cotton 20s/16s Module Loaded</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Directory 7 Pages -->
+        <div style="padding-top:1.5rem; border-top:1px solid var(--stone-200);">
+          <div class="flex-between" style="margin-bottom:1rem;">
+            <h2 style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--stone-800);">
+              🧭 Direktori Halaman Portofolio (Klik untuk Membuka Halaman Langsung)
+            </h2>
+            <span style="font-size:0.6875rem; color:var(--stone-500);">Tanpa scroll ke bawah · Langsung masuk ke halaman tujuan</span>
+          </div>
+
+          <div class="grid grid-7" id="hero-directory-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PAGE 02: FOKUS WEB DEVELOPER AI ==================== -->
+    <section id="page-fokus-ai" class="page-section bg-stone">
+      <div class="container">
+        <div style="max-width:48rem; margin-bottom:2.5rem;" class="stack-sm">
+          <div class="kicker">Fokus &amp; Filosofi Pengembang</div>
+          <h2 class="section-title">Fokus sebagai Web Developer dengan Bantuan AI.</h2>
+          <p class="lead-text">
+            Saya <strong>bukan orang IT konvensional</strong> dan tidak mendalami teknik coding manual dari nol. Namun, saya memiliki minat yang sangat kuat di bidang <strong>web development</strong> dengan memanfaatkan <strong>Artificial Intelligence (AI)</strong> sebagai partner berpikir, pemecah masalah, dan katalisator inovasi masa depan.
+          </p>
+        </div>
+
+        <div class="grid grid-12" style="margin-bottom:3rem; align-items:start;">
+          <div class="col-span-7 stack-sm" style="color:var(--stone-700); font-size:0.95rem; line-height:1.7;">
+            <p>
+              Sebagai lulusan <strong>SMK Negeri 2 Blora tahun 2025 jurusan Akuntansi dan Keuangan Lembaga (AKL)</strong>, latar belakang saya berakar pada disiplin pencatatan, ketelitian angka, dan analisis logika neraca.
+            </p>
+            <p>
+              Di era revolusi kecerdasan buatan, saya melihat kesempatan besar: menjadi developer tidak lagi harus diartikan sebagai orang yang menghafal seluruh sintaks kode secara mandiri. Bagi saya, keahlian masa depan adalah <strong>kemampuan merumuskan masalah secara kritis, memformulasikan instruksi (prompt) yang presisi, dan memvalidasi kebenaran logika sistem</strong>.
+            </p>
+            <p>
+              Saat ini saya sedang <strong>fokus belajar di bidang keuangan digital</strong> serta memanfaatkan teknologi AI untuk mempermudah pemecahan masalah di dunia nyata. Saya sangat bersemangat mempelajari perkembangan teknologi AI untuk masa depan dunia, dan menjadikan AI sebagai partner bertukar pikiran serta informasi.
+            </p>
+            <p>
+              Dengan kombinasi ketelitian akuntansi dan daya bantu AI, saya bertekad menjadi developer modern yang mampu menjembatani ide bisnis riil—seperti brand clothing <strong>LYONESSE</strong> yang sedang saya rintis—menjadi antarmuka web yang akurat, interaktif, dan berdampak nyata.
+            </p>
+          </div>
+
+          <div class="col-span-5 card card-lg stack-sm">
+            <div style="padding-bottom:0.75rem; border-bottom:1px solid var(--stone-100);">
+              <span class="font-mono" style="font-size:0.7rem; font-weight:600; color:var(--stone-500); text-transform:uppercase;">Alur Kerja Pengembang</span>
+              <h3 style="font-size:1rem; font-weight:700; margin-top:0.25rem;">Bagaimana Arum Memecahkan Masalah bersama AI</h3>
+            </div>
+            <div class="card-stone" style="padding:0.75rem;">
+              <div style="font-size:0.75rem; font-weight:700; margin-bottom:0.25rem;">1. Identifikasi Logika &amp; Kebutuhan Nyata</div>
+              <p style="font-size:0.75rem; color:var(--stone-600);">Merumuskan masalah bisnis secara terukur: "Bagaimana menghubungkan seluruh komponen HPP kaos langsung ke titik impas BEP dan jurnal umum?"</p>
+            </div>
+            <div class="card-stone" style="padding:0.75rem;">
+              <div style="font-size:0.75rem; font-weight:700; margin-bottom:0.25rem;">2. Diskusi &amp; Formulasi Solusi Bersama AI</div>
+              <p style="font-size:0.75rem; color:var(--stone-600);">Mengajak AI bertukar pikiran untuk merancang struktur data reaktif, komponen interaktif slider, dan perhitungan matematika yang tepat.</p>
+            </div>
+            <div class="card-stone" style="padding:0.75rem;">
+              <div style="font-size:0.75rem; font-weight:700; margin-bottom:0.25rem;">3. Validasi Akuntansi &amp; Uji Lapangan</div>
+              <p style="font-size:0.75rem; color:var(--stone-600);">Arum memvalidasi hasil secara ketat: memastikan neraca debit/kredit selalu seimbang, margin sehat, dan tampilan nyaman dibaca.</p>
+            </div>
+            <div class="flex-between" style="padding-top:0.5rem; border-top:1px solid var(--stone-100); font-size:0.75rem; color:var(--stone-500);">
+              <span>Etos: Belajar Hal Baru Setiap Hari</span>
+              <strong class="font-mono" style="color:var(--stone-900);">AI + Human Logic</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="card stack-xs">
+            <div style="width:2rem; height:2rem; border-radius:0.5rem; background:var(--stone-900); color:#fff; display:flex; align-items:center; justify-content:center; font-size:0.875rem;">⚙</div>
+            <h4 style="font-size:0.875rem; font-weight:700;">AI sebagai Partner Bertukar Pikiran</h4>
+            <p style="font-size:0.75rem; color:var(--stone-600);">Bukan sekadar alat otomatisasi pasif, melainkan partner dialog intelektual untuk menguji hipotesis, mendiskusikan arsitektur web, dan memecahkan tantangan logika.</p>
+          </div>
+          <div class="card stack-xs">
+            <div style="width:2rem; height:2rem; border-radius:0.5rem; background:var(--stone-900); color:#fff; display:flex; align-items:center; justify-content:center; font-size:0.875rem;">↗</div>
+            <h4 style="font-size:0.875rem; font-weight:700;">Fokus Belajar Keuangan Digital</h4>
+            <p style="font-size:0.75rem; color:var(--stone-600);">Mendalami pergeseran dari pembukuan konvensional ke fintech modern, cloud accounting, dan otomatisasi arus kas untuk mendukung keputusan bisnis yang sehat.</p>
+          </div>
+          <div class="card stack-xs">
+            <div style="width:2rem; height:2rem; border-radius:0.5rem; background:var(--stone-900); color:#fff; display:flex; align-items:center; justify-content:center; font-size:0.875rem;">⊞</div>
+            <h4 style="font-size:0.875rem; font-weight:700;">Validasi Akuntansi &amp; Ketelitian Angka</h4>
+            <p style="font-size:0.75rem; color:var(--stone-600);">Prinsip akuntansi berpasangan (double-entry) dan perhitungan BEP menjadi instrumen validasi ketat agar setiap baris sistem web benar-benar presisi secara finansial.</p>
+          </div>
+          <div class="card stack-xs">
+            <div style="width:2rem; height:2rem; border-radius:0.5rem; background:var(--stone-900); color:#fff; display:flex; align-items:center; justify-content:center; font-size:0.875rem;">📖</div>
+            <h4 style="font-size:0.875rem; font-weight:700;">Semangat Belajar Hal Baru &amp; Masa Depan</h4>
+            <p style="font-size:0.75rem; color:var(--stone-600);">Terus antusias mengeksplorasi perkembangan teknologi AI global, tekun membaca literatur terpercaya, dan aktif membuka diri untuk bertukar wawasan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PAGE 03: PROJECT BRAND LYONESSE ==================== -->
+    <section id="page-lyonesse" class="page-section bg-stone">
+      <div class="container">
+        <div style="max-width:48rem; margin-bottom:2rem;" class="stack-xs">
+          <div class="kicker">Project Unggulan &amp; Fokus Utama</div>
+          <h2 class="section-title">LYONESSE: Brand Clothing Cotton Combed 20s &amp; 16s.</h2>
+          <p class="lead-text">
+            Sebagai <strong>Founder</strong>, saya fokus merintis dan memvalidasi brand pakaian <strong>LYONESSE</strong> bersama rekan. Kami memadukan pemikiran kritis, disiplin akuntansi biaya, dan AI sebagai rekan bertukar ide.
+          </p>
+        </div>
+
+        <div class="card card-lg" style="margin-bottom:2rem;">
+          <div class="flex-between" style="padding-bottom:1rem; margin-bottom:1.25rem; border-bottom:1px solid var(--stone-100);">
+            <div>
+              <h3 style="font-size:1.125rem; font-weight:700;">Ringkasan Pilihan Bahan: Cotton Combed 20s vs. 16s</h3>
+              <p style="font-size:0.75rem; color:var(--stone-500); margin-top:0.25rem;">Penjelasan ringkas agar Anda langsung memahami perbedaan karakter kedua jenis kain:</p>
+            </div>
+            <a href="#/kalkulator" data-nav="kalkulator" style="font-size:0.75rem; font-weight:600; color:var(--stone-900); text-decoration:underline;">
+              Uji Biaya HPP &amp; BEP di Kalkulator →
+            </a>
+          </div>
+
+          <div class="grid grid-2">
+            <div class="card-stone" style="border-color:var(--stone-900);">
+              <div class="flex-between" style="margin-bottom:0.5rem;">
+                <span class="font-mono" style="font-size:0.75rem; font-weight:700;">Cotton Combed 20s</span>
+                <span class="badge badge-stone">Standar Distro Premium</span>
+              </div>
+              <div style="font-size:0.9375rem; font-weight:700; margin-bottom:0.35rem;" class="font-display">Tebal Sedang, Lembut &amp; Adem di Iklim Tropis</div>
+              <p style="font-size:0.75rem; color:var(--stone-600); line-height:1.6; margin-bottom:1rem;">
+                Bahan kaos distro berkualitas tinggi. Serat kapas menyerap keringat dengan sangat baik, tidak gerah, dan nyaman dipakai harian untuk gaya santai (regular fit).
+              </p>
+              <div class="flex-between" style="padding-top:0.75rem; border-top:1px solid var(--stone-200); font-size:0.75rem; color:var(--stone-700);">
+                <span>Rekomendasi HPP: <strong>Rp 60rb — 68rb</strong></span>
+                <span>Target Jual: <strong>Rp 125rb — 140rb</strong></span>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="flex-between" style="margin-bottom:0.5rem;">
+                <span class="font-mono" style="font-size:0.75rem; font-weight:700;">Cotton Combed 16s</span>
+                <span class="badge badge-stone">Ultra-Heavyweight Streetwear</span>
+              </div>
+              <div style="font-size:0.9375rem; font-weight:700; margin-bottom:0.35rem;" class="font-display">Ekstra Tebal, Kokoh &amp; Siluet Boxy Tegak</div>
+              <p style="font-size:0.75rem; color:var(--stone-600); line-height:1.6; margin-bottom:1rem;">
+                Bahan paling tebal dan berbobot mantap. Potongan kaos jatuh tegak tidak menerawang, kerah tidak mudah melar, dan sangat awet untuk gaya potongan oversized boxy kekinian.
+              </p>
+              <div class="flex-between" style="padding-top:0.75rem; border-top:1px solid var(--stone-200); font-size:0.75rem; color:var(--stone-700);">
+                <span>Rekomendasi HPP: <strong>Rp 76rb — 86rb</strong></span>
+                <span>Target Jual: <strong>Rp 155rb — 180rb</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stack-sm">
+          <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--stone-800);">
+            Cara Arum Menggunakan AI sebagai Rekan Berpikir dalam Brand LYONESSE
+          </div>
+          <div class="grid grid-4">
+            <div class="card stack-xs">
+              <div class="flex-between font-mono" style="font-size:0.75rem; color:var(--stone-400);"><span>01</span><strong style="color:var(--stone-700);">LYONESSE</strong></div>
+              <h4 style="font-size:0.875rem; font-weight:700;">Riset Pasar &amp; Sintesis Tren Siluet</h4>
+              <p style="font-size:0.75rem; color:var(--stone-600);">Menganalisis pergeseran minat fashion lokal dari kaos tipis biasa menuju potongan boxy heavyweight yang awet.</p>
+              <div style="padding-top:0.5rem; border-top:1px solid var(--stone-100); font-size:0.6875rem; font-weight:600; color:var(--stone-800);">Ide Kritis: Menentukan proporsi potongan yang pas untuk iklim Indonesia.</div>
+            </div>
+            <div class="card stack-xs">
+              <div class="flex-between font-mono" style="font-size:0.75rem; color:var(--stone-400);"><span>02</span><strong style="color:var(--stone-700);">LYONESSE</strong></div>
+              <h4 style="font-size:0.875rem; font-weight:700;">Pemodelan HPP &amp; BEP Unit Presisi</h4>
+              <p style="font-size:0.75rem; color:var(--stone-600);">Menghitung akurat seluruh komponen HPP (kain, jahit, sablon, aksesoris, kemasan) agar setiap kaos memiliki margin sehat di atas titik impas.</p>
+              <div style="padding-top:0.5rem; border-top:1px solid var(--stone-100); font-size:0.6875rem; font-weight:600; color:var(--stone-800);">Akuntansi Terapan: Menjamin kelayakan arus kas sebelum produksi masal.</div>
+            </div>
+            <div class="card stack-xs">
+              <div class="flex-between font-mono" style="font-size:0.75rem; color:var(--stone-400);"><span>03</span><strong style="color:var(--stone-700);">LYONESSE</strong></div>
+              <h4 style="font-size:0.875rem; font-weight:700;">Standardisasi Jahitan &amp; Vendor Brief</h4>
+              <p style="font-size:0.75rem; color:var(--stone-600);">Menyusun spesifikasi teknis konveksi (jahit rantai, rib leher anti-melar) secara terstruktur melalui instruksi AI yang presisi.</p>
+              <div style="padding-top:0.5rem; border-top:1px solid var(--stone-100); font-size:0.6875rem; font-weight:600; color:var(--stone-800);">Kontrol Mutu: Memastikan hasil jahit sesuai standar tanpa salah paham.</div>
+            </div>
+            <div class="card stack-xs">
+              <div class="flex-between font-mono" style="font-size:0.75rem; color:var(--stone-400);"><span>04</span><strong style="color:var(--stone-700);">LYONESSE</strong></div>
+              <h4 style="font-size:0.875rem; font-weight:700;">Storytelling &amp; Narasi Brand</h4>
+              <p style="font-size:0.75rem; color:var(--stone-600);">Mengembangkan identitas visual dan pesan produk yang jujur, mengedepankan kualitas fisik kain ketimbang gimmick pemasaran.</p>
+              <div style="padding-top:0.5rem; border-top:1px solid var(--stone-100); font-size:0.6875rem; font-weight:600; color:var(--stone-800);">Strategi Komunikasi: Membangun kepercayaan jangka panjang pelanggan.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PAGE 04: LABORATORIUM KALKULATOR ==================== -->
+    <section id="page-kalkulator" class="page-section bg-white">
+      <div class="container">
+        <div style="max-width:48rem; margin-bottom:2rem;" class="stack-xs">
+          <div class="kicker">Laboratorium Finansial &amp; Logika Akuntansi</div>
+          <h2 class="section-title">Kalkulator BEP, HPP Kaos, Laba Rugi, &amp; Jurnal Umum.</h2>
+          <p class="lead-text">
+            Sebagai lulusan Akuntansi, saya membangun kalkulator unit economics interaktif untuk lini pakaian <strong>LYONESSE</strong> yang mencakup bahan <strong>Cotton Combed 20s</strong> dan <strong>Cotton Combed 16s</strong>.
+          </p>
+        </div>
+
+        <!-- Guide Banner -->
+        <div class="guide-banner stack-xs">
+          <div style="font-weight:700; font-size:0.9375rem;">🎛 Ayo Coba Simulasi Interaktif! Seluruh Nilai Bebas Anda Geser &amp; Ubah</div>
+          <p style="font-size:0.8125rem; color:var(--stone-700); line-height:1.6;">
+            Kalkulator ini dirancang <strong>terbuka penuh untuk Anda coba</strong>. Silakan <strong>geser slider</strong> pada harga jual, komponen HPP (kain, jahit, sablon, label name tag, packaging), biaya operasional tetap, maupun target volume penjualan kaos. Tersedia pilihan mode <strong>Kalkulator Kaos 20s</strong> (Standar Distro) dan <strong>Kalkulator Kaos 16s</strong> (Ultra-Heavyweight).
+          </p>
+          <div style="font-size:0.75rem; color:var(--stone-800); padding-top:0.5rem; border-top:1px solid var(--stone-200);">
+            <strong>👉 Panduan:</strong> Geser slider di bawah ini dan perhatikan bagaimana <strong>Diagnosa Finansial (di atas), Titik Impas BEP, Laba Rugi, serta Jurnal Umum</strong> langsung berubah secara real-time!
+          </div>
+        </div>
+
+        <!-- Dual Fabric Preset Selector -->
+        <div class="preset-box stack-sm">
+          <div class="flex-between">
+            <span style="font-size:0.75rem; font-weight:700; text-transform:uppercase;">👕 Pilih Mode Kalkulator Bahan Kaos:</span>
+            <span id="calc-mode-badge" class="font-mono" style="font-size:0.75rem; font-weight:600; color:var(--stone-600);">Mode Aktif: Cotton Combed 20s</span>
+          </div>
+
+          <div class="grid grid-2-sm" style="gap:0.75rem;">
+            <button type="button" class="preset-btn active" id="preset-btn-20s">
+              <div class="flex-between" style="margin-bottom:0.25rem;">
+                <span class="font-mono" style="font-size:0.75rem; font-weight:700;">1. Kalkulator Cotton Combed 20s</span>
+                <span class="badge badge-stone">Standar Distro</span>
+              </div>
+              <p style="font-size:0.6875rem; color:var(--stone-600);">Tebal sedang &amp; adem. Preset HPP: Rp 67.000 · Rekomendasi Jual: Rp 135.000</p>
+            </button>
+
+            <button type="button" class="preset-btn" id="preset-btn-16s">
+              <div class="flex-between" style="margin-bottom:0.25rem;">
+                <span class="font-mono" style="font-size:0.75rem; font-weight:700;">2. Kalkulator Cotton Combed 16s</span>
+                <span class="badge badge-stone">Ultra-Heavyweight</span>
+              </div>
+              <p style="font-size:0.6875rem; color:var(--stone-600);">Ekstra tebal &amp; siluet boxy. Preset HPP: Rp 85.500 · Rekomendasi Jual: Rp 169.000</p>
+            </button>
+          </div>
+
+          <div class="flex-between" style="padding-top:0.5rem; border-top:1px solid var(--stone-200); font-size:0.75rem;">
+            <div style="display:flex; flex-wrap:wrap; align-items:center; gap:0.5rem;">
+              <span style="color:var(--stone-500); font-weight:500;">Uji Cepat:</span>
+              <button type="button" id="btn-scenario-scale" class="btn-outline" style="padding:0.25rem 0.625rem; font-size:0.75rem; border-radius:0.375rem;">Skala Produksi 250 Pcs</button>
+              <button type="button" id="btn-scenario-promo" class="btn-outline" style="padding:0.25rem 0.625rem; font-size:0.75rem; border-radius:0.375rem;">Harga Diskon Promo</button>
+            </div>
+            <button type="button" id="btn-scenario-reset" style="font-size:0.75rem; color:var(--stone-600); font-weight:500;">↺ Reset Default</button>
+          </div>
+        </div>
+
+        <!-- DIAGNOSA FINANSIAL (AT THE TOP ABOVE SLIDE TABS) -->
+        <div id="health-diagnosis-card" class="health-card health-healthy">
+          <div class="flex-between" style="margin-bottom:0.5rem;">
+            <h3 id="health-label" style="font-size:0.8125rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em;"></h3>
+            <div id="health-metrics-line" class="font-mono" style="font-size:0.75rem; font-weight:500;"></div>
+          </div>
+          <p id="health-summary" style="font-size:0.8125rem; font-weight:500; line-height:1.55;"></p>
+          <div id="health-advice" style="margin-top:0.5rem; padding-top:0.5rem; border-top:1px solid rgba(0,0,0,0.08); font-size:0.75rem;"></div>
+        </div>
+
+        <!-- Slideable Accounting Cycle Explanation Bar -->
+        <div class="slide-strip-banner">
+          <div style="font-weight:600; color:var(--stone-900);">
+            <span>⇄ Alur Siklus Akuntansi: </span>
+            <span style="font-weight:500; color:var(--stone-700);">👉 Slide ini bisa digeser/diklik ke kanan untuk melihat siklus akuntansi di sebelahnya!</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:0.5rem;">
+            <span id="calc-slide-counter" class="badge" style="background:#fff; border:1px solid var(--stone-200); color:var(--stone-600);">Slide 1/4</span>
+            <button type="button" id="calc-prev-slide" class="btn-outline" style="padding:0.25rem 0.625rem; font-size:0.75rem; border-radius:0.375rem;">‹ Sebelumnya</button>
+            <button type="button" id="calc-next-slide" class="btn-dark-sm" style="padding:0.25rem 0.625rem;">Selanjutnya ›</button>
+          </div>
+        </div>
+
+        <!-- Tab Selector -->
+        <div class="tabs-bar" id="calc-tabs-bar">
+          <button type="button" class="tab-btn active" data-calc-tab="bep">1. Kalkulator BEP &amp; HPP Kaos <span style="color:var(--stone-300); font-weight:400;">➔</span></button>
+          <button type="button" class="tab-btn" data-calc-tab="pnl">2. Laporan Laba Rugi Real-Time (P&amp;L) <span style="color:var(--stone-300); font-weight:400;">➔</span></button>
+          <button type="button" class="tab-btn" data-calc-tab="journal">3. Jurnal Umum Akuntansi (Double-Entry) <span style="color:var(--stone-300); font-weight:400;">➔</span></button>
+          <button type="button" class="tab-btn" data-calc-tab="cycle">4. Siklus Akuntansi &amp; Kartu HPP Pesanan</button>
+        </div>
+
+        <!-- TAB 1: BEP & HPP SLIDERS -->
+        <div id="calc-panel-bep" class="stack-lg">
+          <div class="grid grid-12" style="align-items:start;">
+            <!-- Sliders Left -->
+            <div class="col-span-7 stack-md">
+              <div class="card-stone stack-xs">
+                <div class="flex-between">
+                  <label for="slider-volume" style="font-size:0.75rem; font-weight:700; text-transform:uppercase;">Target Volume Penjualan Kaos (Pcs)</label>
+                  <span id="val-volume" class="val-pill">150 Pcs</span>
+                </div>
+                <input id="slider-volume" type="range" min="20" max="500" step="5" value="150" />
+                <div class="flex-between" style="font-size:0.6875rem; color:var(--stone-500);">
+                  <span>Batch Awal: 20 pcs</span>
+                  <span>BEP Saat Ini: <strong id="inline-bep-hint">53 pcs</strong></span>
+                  <span>Kapasitas: 500 pcs</span>
+                </div>
+              </div>
+
+              <div class="card-stone stack-xs">
+                <div class="flex-between">
+                  <label for="slider-price" style="font-size:0.75rem; font-weight:700; text-transform:uppercase;">Harga Jual Kaos ke Konsumen</label>
+                  <span id="val-price" class="val-pill">Rp 135.000</span>
+                </div>
+                <input id="slider-price" type="range" min="90000" max="220000" step="1000" value="135000" />
+                <div class="flex-between" style="font-size:0.6875rem; color:var(--stone-500);">
+                  <span>Rp 90.000 (Harga promo)</span>
+                  <span>Rp 220.000 (Heavyweight premium)</span>
+                </div>
+              </div>
+
+              <div class="card-stone slider-sub stack-sm">
+                <div class="flex-between">
+                  <span style="font-size:0.75rem; font-weight:700; text-transform:uppercase;">Rincian Komponen HPP per Kaos</span>
+                  <span id="val-hpp-pill" class="val-pill">HPP: Rp 67.000 / pcs</span>
+                </div>
+
+                <div>
+                  <div class="flex-between" style="font-size:0.75rem; color:var(--stone-700); margin-bottom:0.25rem;">
+                    <label for="slider-fabric" id="lbl-fabric">1. Bahan Baku Kain Cotton Combed 20s:</label>
+                    <strong class="font-mono" id="val-fabric">Rp 36.000</strong>
+                  </div>
+                  <input id="slider-fabric" type="range" min="25000" max="65000" step="500" value="36000" />
+                </div>
+
+                <div>
+                  <div class="flex-between" style="font-size:0.75rem; color:var(--stone-700); margin-bottom:0.25rem;">
+                    <label for="slider-sewing">2. Ongkos Jahit Rantai &amp; Obras:</label>
+                    <strong class="font-mono" id="val-sewing">Rp 14.000</strong>
+                  </div>
+                  <input id="slider-sewing" type="range" min="8000" max="25000" step="500" value="14000" />
+                </div>
+
+                <div>
+                  <div class="flex-between" style="font-size:0.75rem; color:var(--stone-700); margin-bottom:0.25rem;">
+                    <label for="slider-print">3. Sablon Plastisol / Bordir:</label>
+                    <strong class="font-mono" id="val-print">Rp 12.000</strong>
+                  </div>
+                  <input id="slider-print" type="range" min="5000" max="30000" step="500" value="12000" />
+                </div>
+
+                <div>
+                  <div class="flex-between" style="font-size:0.75rem; color:var(--stone-700); margin-bottom:0.25rem;">
+                    <label for="slider-nametag">4. Aksesoris &amp; Label Woven (Name Tag):</label>
+                    <strong class="font-mono" id="val-nametag">Rp 2.500</strong>
+                  </div>
+                  <input id="slider-nametag" type="range" min="500" max="8000" step="250" value="2500" />
+                </div>
+
+                <div>
+                  <div class="flex-between" style="font-size:0.75rem; color:var(--stone-700); margin-bottom:0.25rem;">
+                    <label for="slider-packaging">5. Packaging Zipper Bag &amp; Stiker:</label>
+                    <strong class="font-mono" id="val-packaging">Rp 2.500</strong>
+                  </div>
+                  <input id="slider-packaging" type="range" min="1000" max="8000" step="250" value="2500" />
+                </div>
+
+                <div class="flex-between" style="padding-top:0.625rem; border-top:1px solid var(--stone-200); font-size:0.75rem;">
+                  <span style="font-weight:600;">Total HPP per Kaos (Kain + Jahit + Sablon + Label + Kemasan):</span>
+                  <strong id="val-hpp-total" class="font-mono" style="font-size:0.875rem;">Rp 67.000</strong>
+                </div>
+              </div>
+
+              <div class="card-stone stack-xs">
+                <div class="flex-between">
+                  <label for="slider-fixed" style="font-size:0.75rem; font-weight:700; text-transform:uppercase;">Biaya Tetap Operasional Bulanan</label>
+                  <strong id="val-fixed" class="font-mono" style="font-size:0.8125rem;">Rp 3.550.000</strong>
+                </div>
+                <input id="slider-fixed" type="range" min="1000000" max="6000000" step="100000" value="3550000" />
+                <div id="val-fixed-split" class="flex-between" style="font-size:0.6875rem; color:var(--stone-500);"></div>
+              </div>
+            </div>
+
+            <!-- Live Outputs Right -->
+            <div class="col-span-5 stack-sm">
+              <div class="bep-dark-card stack-md">
+                <div class="flex-between" style="padding-bottom:0.75rem; border-bottom:1px solid var(--stone-800);">
+                  <span class="font-mono" style="font-size:0.75rem; color:var(--stone-400); text-transform:uppercase;">Break-Even Point Real-Time</span>
+                  <span id="out-fabric-label" style="font-size:0.75rem; font-weight:600; color:var(--stone-300);">Combed 20s</span>
+                </div>
+
+                <div class="grid" style="grid-template-columns:1fr 1fr; gap:1rem;">
+                  <div>
+                    <div style="font-size:0.75rem; color:var(--stone-400);">Titik Impas (BEP Unit)</div>
+                    <div id="out-bep-units" class="font-mono tabular-nums" style="font-size:1.875rem; font-weight:800; margin-top:0.25rem;">53 pcs</div>
+                    <div style="font-size:0.6875rem; color:var(--stone-400);">Jumlah kaos minimal</div>
+                  </div>
+                  <div>
+                    <div style="font-size:0.75rem; color:var(--stone-400);">Titik Impas (BEP Rupiah)</div>
+                    <div id="out-bep-rupiah" class="font-mono tabular-nums" style="font-size:1.125rem; font-weight:700; color:var(--stone-200); margin-top:0.25rem;">Rp 7.048.438</div>
+                    <div style="font-size:0.6875rem; color:var(--stone-400);">Omzet minimal impas</div>
+                  </div>
+                </div>
+
+                <div class="stack-xs" style="padding-top:0.75rem; border-top:1px solid var(--stone-800); font-size:0.75rem;">
+                  <div class="flex-between"><span style="color:var(--stone-400);">Margin Kontribusi per Kaos:</span><strong id="out-cm-unit" class="font-mono"></strong></div>
+                  <div class="flex-between"><span style="color:var(--stone-400);">Rasio Margin Kontribusi:</span><strong id="out-cm-ratio" class="font-mono"></strong></div>
+                  <div class="flex-between"><span style="color:var(--stone-400);">Margin of Safety (Bantalan Aman):</span><strong id="out-mos" class="font-mono"></strong></div>
+                </div>
+
+                <div id="out-pnl-connection" style="padding:0.75rem; background:var(--stone-950); border:1px solid var(--stone-800); border-radius:0.75rem; font-size:0.6875rem; color:var(--stone-300); line-height:1.5;"></div>
+              </div>
+
+              <div class="card-stone stack-sm" style="font-size:0.75rem;">
+                <div class="flex-between" style="font-weight:700;">
+                  <span>▤ Komposisi HPP per Kaos</span>
+                  <span id="out-hpp-unit-comp" class="font-mono" style="font-size:0.875rem;"></span>
+                </div>
+                <div id="out-hpp-breakdown" class="stack-xs" style="font-size:0.6875rem; color:var(--stone-600);"></div>
+                <div id="out-hpp-accum-note" style="padding:0.625rem; background:#fff; border:1px solid var(--stone-200); border-radius:0.5rem; font-size:0.6875rem; color:var(--stone-600);"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-strip-banner" style="margin-bottom:0;">
+            <span><strong>👉 Siklus Akuntansi Berikutnya:</strong> Di sebelah kalkulator BEP ini terdapat alur <strong>Laporan Laba Rugi Real-Time</strong> yang otomatis terhitung.</span>
+            <button type="button" class="btn btn-primary" data-jump-tab="pnl" style="font-size:0.75rem; padding:0.5rem 1rem;">Geser ke Slide 2: Laporan Laba Rugi (P&amp;L) ›</button>
+          </div>
+        </div>
+
+        <!-- TAB 2: P&L -->
+        <div id="calc-panel-pnl" class="stack-md hidden">
+          <div class="card-stone flex-between">
+            <div>
+              <h3 style="font-size:0.9375rem; font-weight:700;">Laporan Laba Rugi Operasional Real-Time (Income Statement)</h3>
+              <p id="pnl-subtitle" style="font-size:0.75rem; color:var(--stone-600);"></p>
+            </div>
+            <div id="pnl-net-pill" class="val-pill"></div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Komponen Laba Rugi</th>
+                  <th class="text-right font-mono">Per Kaos</th>
+                  <th class="text-right font-mono" id="pnl-col-total-hdr">Total Akumulasi</th>
+                  <th class="text-right font-mono">% Omzet</th>
+                </tr>
+              </thead>
+              <tbody id="pnl-tbody"></tbody>
+            </table>
+          </div>
+          <div class="slide-strip-banner" style="margin-bottom:0;">
+            <button type="button" class="btn btn-outline" data-jump-tab="bep" style="font-size:0.75rem; padding:0.5rem 0.875rem;">‹ Kembali ke Slide 1: Kalkulator BEP</button>
+            <span style="color:var(--stone-500);">Siklus 2 dari 4 (Laporan Laba Rugi)</span>
+            <button type="button" class="btn btn-primary" data-jump-tab="journal" style="font-size:0.75rem; padding:0.5rem 1rem;">Geser ke Slide 3: Jurnal Umum Standar ›</button>
+          </div>
+        </div>
+
+        <!-- TAB 3: JOURNAL -->
+        <div id="calc-panel-journal" class="stack-md hidden">
+          <div class="card-stone flex-between">
+            <div>
+              <h3 style="font-size:0.9375rem; font-weight:700;">Jurnal Umum Standar Akuntansi (Double-Entry Verification)</h3>
+              <p style="font-size:0.75rem; color:var(--stone-600);">Setiap kali BEP, volume, atau komponen HPP digeser, pos debit dan kredit di jurnal ini langsung terupdate dan terverifikasi balance (Rp 0 selisih).</p>
+            </div>
+            <span id="journal-balance-badge" class="badge badge-emerald">✓ Jurnal Seimbang (Balance)</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th class="font-mono">Tanggal / Kode</th>
+                  <th>Nama Akun &amp; Keterangan Transaksi</th>
+                  <th class="text-right font-mono">Debit (Rp)</th>
+                  <th class="text-right font-mono">Kredit (Rp)</th>
+                </tr>
+              </thead>
+              <tbody id="journal-tbody"></tbody>
+              <tfoot id="journal-tfoot"></tfoot>
+            </table>
+          </div>
+          <div id="journal-note" class="card-stone" style="font-size:0.75rem; color:var(--stone-600);"></div>
+          <div class="slide-strip-banner" style="margin-bottom:0;">
+            <button type="button" class="btn btn-outline" data-jump-tab="pnl" style="font-size:0.75rem; padding:0.5rem 0.875rem;">‹ Kembali ke Slide 2: Laba Rugi</button>
+            <span style="color:var(--stone-500);">Siklus 3 dari 4 (Jurnal Umum)</span>
+            <button type="button" class="btn btn-primary" data-jump-tab="cycle" style="font-size:0.75rem; padding:0.5rem 1rem;">Geser ke Slide 4: Kartu Biaya Pesanan ›</button>
+          </div>
+        </div>
+
+        <!-- TAB 4: CYCLE -->
+        <div id="calc-panel-cycle" class="stack-md hidden">
+          <div class="grid grid-2">
+            <div class="card-stone stack-sm">
+              <div class="flex-between" style="padding-bottom:0.5rem; border-bottom:1px solid var(--stone-200);">
+                <h4 style="font-size:0.875rem; font-weight:700;">Kartu Harga Pokok Pesanan (Job Order Cost Sheet)</h4>
+                <span id="cycle-batch-tag" class="font-mono" style="font-size:0.75rem; color:var(--stone-500);"></span>
+              </div>
+              <div id="cycle-job-rows" class="stack-xs" style="font-size:0.75rem;"></div>
+              <p id="cycle-job-note" style="font-size:0.6875rem; color:var(--stone-500); font-style:italic;"></p>
+            </div>
+            <div class="card-stone stack-sm">
+              <div class="flex-between" style="padding-bottom:0.5rem; border-bottom:1px solid var(--stone-200);">
+                <h4 style="font-size:0.875rem; font-weight:700;">Ringkasan Neraca Saldo (Trial Balance)</h4>
+                <span class="font-mono" style="font-size:0.75rem; font-weight:600; color:var(--emerald-700);">Status: Balanced</span>
+              </div>
+              <div id="cycle-trial-rows" class="stack-xs" style="font-size:0.75rem;"></div>
+              <p style="font-size:0.6875rem; color:var(--stone-500); font-style:italic;">*Mencerminkan siklus akuntansi penuh pasca transaksi penjualan selesai.</p>
+            </div>
+          </div>
+          <div class="slide-strip-banner" style="margin-bottom:0;">
+            <button type="button" class="btn btn-outline" data-jump-tab="journal" style="font-size:0.75rem; padding:0.5rem 0.875rem;">‹ Kembali ke Slide 3: Jurnal Umum</button>
+            <span style="color:var(--stone-500);">Siklus 4 dari 4 (Kartu HPP Pesanan)</span>
+            <button type="button" class="btn btn-outline" data-jump-tab="bep" style="font-size:0.75rem; padding:0.5rem 1rem;">↺ Kembali ke Slide 1: Kalkulator BEP &amp; HPP</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PAGE 05: PRESTASI & SERTIFIKASI ==================== -->
+    <section id="page-prestasi" class="page-section bg-stone">
+      <div class="container">
+        <div style="max-width:48rem; margin-bottom:2rem;" class="stack-xs">
+          <div class="kicker">Rekam Jejak 12 Tahun Sekolah &amp; Kualifikasi Resmi</div>
+          <h2 class="section-title">Prestasi &amp; Sertifikat Resmi.</h2>
+          <p class="lead-text">
+            Ringkasan perjalanan 12 tahun pendidikan formal dari SDN Pxxxx, MTs N Blora, hingga lulusan SMK Negeri 2 Blora tahun 2025 jurusan Akuntansi dan Keuangan Lembaga.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- SDN Pxxxx -->
+          <div class="card card-lg stack-sm" style="display:flex; flex-direction:column; justify-content:space-between;">
+            <div class="stack-sm">
+              <div class="flex-between" style="font-size:0.75rem;">
+                <span class="font-mono" style="font-weight:600; color:var(--stone-500);">2013 — 2019</span>
+                <span class="badge" style="background:var(--stone-100); color:var(--stone-700);">Sekolah Dasar</span>
+              </div>
+              <div>
+                <h3 style="font-size:1rem; font-weight:700;">SDN Pxxxx</h3>
+                <p style="font-size:0.75rem; color:var(--stone-500);">Bela Diri, Seni Tradisional, &amp; Olahraga Beregu</p>
+              </div>
+              <div class="stack-xs" style="padding-top:0.5rem; border-top:1px solid var(--stone-100); font-size:0.75rem;">
+                <div class="card-stone" style="padding:0.5rem 0.625rem;"><strong>🏆 Juara 1 Pencak Silat O2SN</strong><div style="font-size:0.6875rem; color:var(--stone-500);">Tahun 2017 · Tingkat Kecamatan</div></div>
+                <div class="card-stone" style="padding:0.5rem 0.625rem;"><strong>🥈 Juara 2 Pencak Silat O2SN</strong><div style="font-size:0.6875rem; color:var(--stone-500);">Tahun 2018 · Tingkat Kecamatan</div></div>
+                <div class="card-stone" style="padding:0.5rem 0.625rem;"><strong>🥈 Juara 2 Pencak Silat POPDA</strong><div style="font-size:0.6875rem; color:var(--stone-500);">Tahun 2018 · Tingkat Kecamatan</div></div>
+                <div class="card-stone" style="padding:0.5rem 0.625rem;"><strong>🏆 Juara 1 Tim Bola Voli Putri</strong><div style="font-size:0.6875rem; color:var(--stone-500);">Tahun 2019 · Tingkat Kecamatan</div></div>
+                <div class="card-stone" style="padding:0.5rem 0.625rem;"><strong>✦ Juara 3 Macapat Islami MAPSI</strong><div style="font-size:0.6875rem; color:var(--stone-500);">Tahun 2018 · Tingkat Kecamatan</div></div>
+                <div class="card-stone" style="padding:0.5rem 0.625rem;"><strong>✦ Juara Harapan 3 Tari Klasik</strong><div style="font-size:0.6875rem; color:var(--stone-500);">Tahun 2016 · Tingkat Kecamatan</div></div>
+              </div>
+            </div>
+            <div class="font-mono" style="padding-top:0.75rem; border-top:1px solid var(--stone-100); font-size:0.6875rem; color:var(--stone-500);">Total 6 Prestasi Sekolah Dasar</div>
+          </div>
+
+          <!-- MTs N Blora -->
+          <div class="card card-lg stack-sm" style="display:flex; flex-direction:column; justify-content:space-between;">
+            <div class="stack-sm">
+              <div class="flex-between" style="font-size:0.75rem;">
+                <span class="font-mono" style="font-weight:600; color:var(--stone-500);">2019 — 2022</span>
+                <span class="badge" style="background:var(--stone-100); color:var(--stone-700);">Madrasah Tsanawiyah</span>
+              </div>
+              <div>
+                <h3 style="font-size:1rem; font-weight:700;">MTs N Blora</h3>
+                <p style="font-size:0.75rem; color:var(--stone-500);">Penguatan Akademik, Etika, &amp; Karakter Mandiri</p>
+              </div>
+              <div class="stack-sm" style="padding-top:0.5rem; border-top:1px solid var(--stone-100); font-size:0.75rem;">
+                <div style="padding:0.875rem; border-radius:0.75rem; background:var(--amber-50); border:1px solid var(--amber-200);">
+                  <div style="font-weight:700; font-size:0.875rem;">🥉 Medali Perunggu Olimpiade PAI</div>
+                  <div style="color:var(--amber-900); font-weight:600; margin-top:0.15rem;">Pendidikan Agama Islam (Tahun 2022)</div>
+                  <p style="font-size:0.6875rem; color:var(--stone-600); margin-top:0.35rem;">Pencapaian kompetisi akademik atas pemahaman literatur keislaman, etika moral, dan nalar kritis.</p>
+                </div>
+                <div class="card-stone" style="padding:0.75rem; font-size:0.75rem; color:var(--stone-600);">
+                  <strong>Fondasi Pola Pikir:</strong> Masa pendidikan di MTs N Blora menanamkan ketekunan belajar hal baru dan kecintaan membaca yang kini menjadi dasar cara pandang Arum.
+                </div>
+              </div>
+            </div>
+            <div class="font-mono" style="padding-top:0.75rem; border-top:1px solid var(--stone-100); font-size:0.6875rem; color:var(--stone-500);">Olimpiade Akademik 2022</div>
+          </div>
+
+          <!-- SMK Negeri 2 Blora -->
+          <div class="card card-lg stack-sm" style="display:flex; flex-direction:column; justify-content:space-between;">
+            <div class="stack-sm">
+              <div class="flex-between" style="font-size:0.75rem;">
+                <span class="font-mono" style="font-weight:600; color:var(--stone-500);">2022 — 2025</span>
+                <span class="badge badge-dark">Lulusan 2025</span>
+              </div>
+              <div>
+                <h3 style="font-size:1rem; font-weight:700;">SMK Negeri 2 Blora</h3>
+                <p style="font-size:0.75rem; color:var(--stone-500);">Jurusan Akuntansi dan Keuangan Lembaga (AKL)</p>
+              </div>
+              <div class="stack-xs" style="padding-top:0.5rem; border-top:1px solid var(--stone-100); font-size:0.75rem;">
+                <div class="card-stone" style="padding:0.625rem;">
+                  <div class="flex-between"><strong>🎓 Sertifikat UKK Akuntansi</strong><span class="badge badge-emerald">KOMPETEN</span></div>
+                  <p style="font-size:0.6875rem; color:var(--stone-600); margin-top:0.25rem;">Siklus akuntansi penuh: jurnal umum &amp; khusus, buku besar, neraca lajur, laba rugi, dan spreadsheet akuntansi.</p>
+                </div>
+                <div class="card-stone" style="padding:0.625rem;">
+                  <div class="flex-between"><strong>🎙 Sertifikat PKL Penyiar Radio</strong><span class="badge badge-stone">SANGAT BAGUS</span></div>
+                  <p style="font-size:0.6875rem; color:var(--stone-600); margin-top:0.25rem;">Praktik kerja industri: public speaking, perancangan naskah siaran, dan modulasi vokal on-air terstruktur.</p>
+                </div>
+                <div class="card-stone" style="padding:0.625rem;">
+                  <div class="flex-between"><strong>✦ Sertifikat Viva Beauty</strong><span class="badge badge-stone">TERSERTIFIKASI</span></div>
+                  <p style="font-size:0.6875rem; color:var(--stone-600); margin-top:0.25rem;">Pelatihan grooming profesional, etika kerja, dan representasi diri dalam pelayanan prima bisnis.</p>
+                </div>
+              </div>
+            </div>
+            <div class="font-mono" style="padding-top:0.75rem; border-top:1px solid var(--stone-100); font-size:0.6875rem; color:var(--stone-500);">3 Kualifikasi &amp; Sertifikasi Resmi</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PAGE 06: BUKU BACAAN ==================== -->
+    <section id="page-buku" class="page-section bg-white">
+      <div class="container">
+        <div style="max-width:48rem; margin-bottom:2.5rem;" class="stack-sm">
+          <div class="kicker">Literasi, Hobi Membaca, &amp; Pola Pikir</div>
+          <h2 class="section-title">Buku yang Membentuk Cara Pandang: Benjamin Graham &amp; Warren Buffett.</h2>
+          <p class="lead-text">
+            Hobi membaca adalah fondasi utama saya dalam menelaah hal-hal baru. Dari buku investasi legendaris <em>The Intelligent Investor</em> karya Benjamin Graham hingga prinsip <em>Warren Buffett Mindset</em>, inilah kata-kata kunci dan refleksi yang saya terapkan dalam membangun brand LYONESSE dan kolaborasi teknologi AI.
+          </p>
+        </div>
+
+        <div class="grid grid-2" style="margin-bottom:2.5rem;" id="books-grid"></div>
+
+        <div class="card-stone card-lg flex-between">
+          <div style="max-width:42rem;">
+            <h4 style="font-size:1rem; font-weight:700; margin-bottom:0.25rem;">"Buku adalah kompas terbaik saat menjelajah ranah baru."</h4>
+            <p style="font-size:0.875rem; color:var(--stone-600); line-height:1.6;">
+              Kombinasi antara wawasan bisnis klasik, literatur keuangan, dan kemampuan berdialog dengan AI memberi saya rasa percaya diri untuk terus belajar, beradaptasi, dan merintis inovasi di usia muda.
+            </p>
+          </div>
+          <a href="#/kontak" class="btn btn-primary" data-nav="kontak" style="font-size:0.75rem;">Diskusikan Ide &amp; Rekomendasi Buku ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PAGE 07: KOTAK MASUKAN / KONTAK ==================== -->
+    <section id="page-kontak" class="page-section bg-stone">
+      <div class="container">
+        <div class="grid grid-12" style="align-items:start;">
+          <div class="col-span-5 stack-md">
+            <div class="stack-xs">
+              <div class="kicker">Kotak Masukan &amp; Hubungi Langsung</div>
+              <h2 class="section-title">Kotak Masukan, Kolaborasi &amp; Diskusi Langsung.</h2>
+              <p class="lead-text">
+                Apakah Anda tertarik berkolaborasi dalam pengembangan brand pakaian <strong>LYONESSE</strong>, eksplorasi pembuatan produk web berbantuan AI, pemodelan keuangan digital, atau pertukaran wawasan? Pintu komunikasi selalu terbuka lebar.
+              </p>
+            </div>
+
+            <div class="stack-sm">
+              <div class="card">
+                <div class="flex-between" style="font-size:0.75rem; color:var(--stone-500); margin-bottom:0.35rem;">
+                  <span>✉ Email Pribadi (Arum Dahlia)</span>
+                  <span class="font-mono">Personal</span>
+                </div>
+                <div class="flex-between">
+                  <a href="mailto:arumdahlia67@gmail.com" class="font-mono" style="font-size:0.875rem; font-weight:600;">arumdahlia67@gmail.com</a>
+                  <button type="button" class="btn-outline copy-email-btn" data-copy="arumdahlia67@gmail.com" style="padding:0.25rem 0.5rem; font-size:0.7rem; border-radius:0.375rem;">Salin</button>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="flex-between" style="font-size:0.75rem; color:var(--stone-500); margin-bottom:0.35rem;">
+                  <span>👕 Email Bisnis Brand LYONESSE</span>
+                  <span class="font-mono">Apparel &amp; Partnership</span>
+                </div>
+                <div class="flex-between">
+                  <a href="mailto:lyonessebusiness@gmail.com" class="font-mono" style="font-size:0.875rem; font-weight:600;">lyonessebusiness@gmail.com</a>
+                  <button type="button" class="btn-outline copy-email-btn" data-copy="lyonessebusiness@gmail.com" style="padding:0.25rem 0.5rem; font-size:0.7rem; border-radius:0.375rem;">Salin</button>
+                </div>
+              </div>
+
+              <div class="card" style="font-size:0.75rem;">
+                <div style="color:var(--stone-500); font-weight:500;">Basis Domisili &amp; Lokasi</div>
+                <div style="font-size:0.875rem; font-weight:600; margin:0.25rem 0;">📍 Blora, Jawa Tengah, Indonesia</div>
+                <div style="color:var(--stone-500);">Mendukung kerja sama jarak jauh (remote), proyek kolaboratif, maupun diskusi tatap muka.</div>
+              </div>
+            </div>
+
+            <div class="card-stone" style="background:var(--stone-100); font-size:0.75rem; color:var(--stone-700);">
+              <strong style="color:var(--stone-900); display:block; margin-bottom:0.25rem;">💼 Terbuka untuk Diskusi &amp; Pertukaran Pengetahuan</strong>
+              "AI adalah mitra percepatan masa depan. Siapa pun Anda yang ingin berdiskusi seputar apparel bisnis, ide digital, atau pengembangan diri—saya menyambutnya dengan hangat."
+            </div>
+          </div>
+
+          <div class="col-span-7">
+            <div class="card card-lg">
+              <h3 style="font-size:1.125rem; font-weight:700; margin-bottom:0.25rem;">Kirim Pesan Langsung</h3>
+              <p style="font-size:0.75rem; color:var(--stone-500); margin-bottom:1.25rem;">
+                Silakan tuliskan ide kolaborasi, tawaran project, atau pesan Anda. Formulir ini terhubung langsung ke surel Arum &amp; LYONESSE.
+              </p>
+
+              <form id="contact-form" class="stack-sm">
+                <div class="grid grid-2-sm" style="gap:1rem;">
+                  <div>
+                    <label for="c-name" style="display:block; font-size:0.75rem; font-weight:600; margin-bottom:0.35rem;">Nama Lengkap Anda</label>
+                    <input id="c-name" type="text" required placeholder="Contoh: Budi Santoso" class="input-field" />
+                  </div>
+                  <div>
+                    <label for="c-email" style="display:block; font-size:0.75rem; font-weight:600; margin-bottom:0.35rem;">Alamat Email Anda</label>
+                    <input id="c-email" type="email" required placeholder="nama@email.com" class="input-field" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="c-topic" style="display:block; font-size:0.75rem; font-weight:600; margin-bottom:0.35rem;">Topik Kolaborasi / Pesan</label>
+                  <select id="c-topic" class="input-field">
+                    <option value="Kolaborasi Project Brand LYONESSE">Kolaborasi Project Brand LYONESSE</option>
+                    <option value="Web Development & AI-Assisted Solution">Web Development &amp; AI-Assisted Solution</option>
+                    <option value="Konsultasi Unit Economics & Akuntansi UMKM">Konsultasi Unit Economics &amp; Akuntansi UMKM</option>
+                    <option value="Diskusi Literatur & Rekomendasi Buku">Diskusi Literatur &amp; Rekomendasi Buku</option>
+                    <option value="Peluang Kerja Sama Lainnya">Peluang Kerja Sama Lainnya</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="c-msg" style="display:block; font-size:0.75rem; font-weight:600; margin-bottom:0.35rem;">Isi Pesan</label>
+                  <textarea id="c-msg" rows="4" required placeholder="Tuliskan gagasan, pertanyaan, atau rincian project yang ingin Anda diskusikan..." class="input-field"></textarea>
+                </div>
+
+                <div class="flex-between" style="padding-top:0.25rem;">
+                  <span style="font-size:0.6875rem; color:var(--stone-500);">Terkirim ke email arumdahlia67@gmail.com</span>
+                  <button type="submit" class="btn btn-primary">✈ Kirim Pesan</button>
+                </div>
+              </form>
+
+              <div id="contact-success" class="card-stone hidden" style="text-align:center; padding:1.75rem; border-color:var(--stone-300);">
+                <div style="width:2.5rem; height:2.5rem; border-radius:9999px; background:var(--stone-900); color:#fff; display:flex; align-items:center; justify-content:center; margin:0 auto 0.75rem;">✓</div>
+                <h4 id="success-title" style="font-size:1rem; font-weight:700; margin-bottom:0.5rem;"></h4>
+                <p id="success-body" style="font-size:0.8125rem; color:var(--stone-700); max-width:28rem; margin:0 auto 1rem;"></p>
+                <button type="button" id="reset-contact-form" class="btn btn-outline" style="font-size:0.75rem;">Kirim Pesan Lain</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Mini-Navigation Bar (Always Visible) -->
+    <div class="bottom-nav-wrap">
+      <div class="container bottom-nav-inner stack-sm">
+        <div class="flex-between">
+          <span style="font-size:0.6875rem; font-weight:700; color:var(--stone-500); text-transform:uppercase; letter-spacing:0.05em;">Pindah Halaman Langsung:</span>
+          <nav id="bottom-mini-nav" style="display:flex; flex-wrap:wrap; gap:0.375rem;" aria-label="Navigasi Cepat Antar Halaman"></nav>
+        </div>
+
+        <div class="flex-between" style="padding-top:0.75rem; border-top:1px solid var(--stone-100);">
+          <div id="stepper-prev-slot"></div>
+          <div id="stepper-next-slot"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container stack-md">
+      <div class="flex-between" style="padding-bottom:2rem; border-bottom:1px solid var(--stone-800); align-items:flex-start;">
+        <div>
+          <button type="button" data-nav="profil" style="font-family:var(--font-display); font-size:1rem; font-weight:700; color:var(--stone-100);">Arum Dahlia</button>
+          <p style="color:var(--stone-400); max-width:28rem; margin-top:0.25rem;">
+            AI-Assisted Web Developer · Founder Brand Clothing LYONESSE (Cotton Combed 20s &amp; 16s) · Lulusan Akuntansi SMK Negeri 2 Blora 2025.
+          </p>
+        </div>
+        <div id="footer-links" style="display:flex; flex-wrap:wrap; gap:1rem; color:var(--stone-400);"></div>
+      </div>
+
+      <div class="flex-between" style="color:var(--stone-500); font-size:0.6875rem;">
+        <div>&copy; <span id="footer-year"></span> Arum Dahlia. Hak Cipta Dilindungi · Dibangun dengan Logika &amp; Kolaborasi AI.</div>
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:0.75rem;">
+          <a href="mailto:arumdahlia67@gmail.com" class="font-mono">arumdahlia67@gmail.com</a>
+          <span>·</span>
+          <a href="mailto:lyonessebusiness@gmail.com" class="font-mono">lyonessebusiness@gmail.com</a>
+          <span>·</span>
+          <button type="button" id="scroll-top-btn">↑ Kembali ke Atas</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Reading & Developer Tools Bar -->
+  <aside class="tools-bar-wrap" aria-label="Alat bantu baca dan navigasi">
+    <div class="tools-bar">
+      <div style="display:flex; align-items:center; gap:0.375rem; padding-right:0.5rem; border-right:1px solid var(--stone-200); font-size:0.75rem;">
+        <span style="color:var(--stone-500); font-family:var(--font-mono);">Posisi:</span>
+        <strong id="tools-active-label" style="white-space:nowrap;">Ringkasan Profil</strong>
+      </div>
+
+      <button type="button" class="tool-chip" id="tools-open-search" title="Cari Cepat di Portofolio (Ctrl+K)">
+        <span>🔍 Cari Topik</span>
+        <span class="font-mono" style="font-size:0.625rem; background:#fff; padding:1px 4px; border:1px solid var(--stone-300); border-radius:4px;">Ctrl+K</span>
+      </button>
+
+      <a href="#/kalkulator" class="tool-chip" data-nav="kalkulator" id="tools-calc-shortcut">🧮 Kalkulator</a>
+
+      <div class="font-toggle-group">
+        <button type="button" class="font-toggle-btn" data-font-size="sm" title="14px">A-</button>
+        <button type="button" class="font-toggle-btn active" data-font-size="base" title="16px">A</button>
+        <button type="button" class="font-toggle-btn" data-font-size="lg" title="18px">A+</button>
+      </div>
+
+      <button type="button" class="tool-chip" id="tools-speak-btn" title="Dengarkan Ringkasan Suara Profil Arum">🔊 <span id="tools-speak-label">Suara</span></button>
+      <button type="button" class="tool-chip hidden" id="tools-stop-speak-btn" title="Hentikan Audio">⏹</button>
+      <button type="button" class="tool-chip" id="tools-ruler-btn" title="Garis Penuntun Baca">👁 Garis Fokus</button>
+    </div>
+  </aside>
+
+  <!-- Search Modal (Ctrl+K) -->
+  <div id="search-modal" class="modal-backdrop align-top" role="dialog" aria-modal="true" aria-label="Pencarian Portofolio">
+    <div class="modal-card" style="max-width:36rem;">
+      <div style="padding:1rem; background:var(--stone-50); border-bottom:1px solid var(--stone-200); display:flex; align-items:center; gap:0.75rem;">
+        <span>🔍</span>
+        <input id="search-input" type="text" placeholder="Cari topik (contoh: lyonesse, combed 16s, bep, silat, benjamin graham, ukk)..." style="flex:1; border:none; background:transparent; font-size:0.9375rem; outline:none;" />
+        <button type="button" id="close-search-modal" style="font-size:1.25rem; color:var(--stone-500);">✕</button>
+      </div>
+      <div style="padding:0.5rem 1rem; background:var(--stone-100); border-bottom:1px solid var(--stone-200); display:flex; flex-wrap:wrap; align-items:center; gap:0.375rem; font-size:0.7rem;">
+        <span style="color:var(--stone-400);">Pilihan Cepat:</span>
+        <button type="button" class="search-chip btn-outline" style="padding:2px 8px; border-radius:4px; font-size:0.6875rem;" data-chip="LYONESSE">LYONESSE</button>
+        <button type="button" class="search-chip btn-outline" style="padding:2px 8px; border-radius:4px; font-size:0.6875rem;" data-chip="16s">Cotton Combed 16s</button>
+        <button type="button" class="search-chip btn-outline" style="padding:2px 8px; border-radius:4px; font-size:0.6875rem;" data-chip="BEP">Kalkulator BEP</button>
+        <button type="button" class="search-chip btn-outline" style="padding:2px 8px; border-radius:4px; font-size:0.6875rem;" data-chip="Silat">O2SN Silat</button>
+        <button type="button" class="search-chip btn-outline" style="padding:2px 8px; border-radius:4px; font-size:0.6875rem;" data-chip="Warren Buffett">Warren Buffett</button>
+        <button type="button" class="search-chip btn-outline" style="padding:2px 8px; border-radius:4px; font-size:0.6875rem;" data-chip="UKK">UKK Akuntansi</button>
+      </div>
+      <div id="search-results" style="max-height:20rem; overflow-y:auto; padding:1rem;" class="stack-xs"></div>
+      <div class="flex-between" style="padding:0.625rem 1rem; background:var(--stone-50); border-top:1px solid var(--stone-200); font-size:0.6875rem; color:var(--stone-500);">
+        <span>Klik hasil untuk langsung membuka halaman terkait</span>
+        <button type="button" id="close-search-footer" style="font-weight:600; color:var(--stone-800);">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resume / CV Modal -->
+  <div id="resume-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Curriculum Vitae Arum Dahlia">
+    <div class="modal-card" style="max-width:48rem; max-height:92vh; display:flex; flex-direction:column;">
+      <div class="flex-between no-print" style="padding:0.875rem 1.5rem; background:var(--stone-100); border-bottom:1px solid var(--stone-200); font-size:0.75rem;">
+        <strong style="font-family:var(--font-display);">Curriculum Vitae — Arum Dahlia</strong>
+        <div style="display:flex; gap:0.5rem;">
+          <button type="button" id="print-resume-btn" class="btn-outline" style="padding:0.375rem 0.75rem; font-size:0.75rem; border-radius:0.375rem;">🖨 Cetak / Simpan PDF</button>
+          <button type="button" id="close-resume-x" style="padding:0.25rem 0.5rem; font-size:1rem;">✕</button>
+        </div>
+      </div>
+
+      <div style="padding:2rem; overflow-y:auto; font-size:0.8125rem; line-height:1.6;" class="stack-md">
+        <div class="flex-between" style="padding-bottom:1.25rem; border-bottom:1px solid var(--stone-200); align-items:flex-start;">
+          <div class="stack-xs">
+            <h1 style="font-size:1.75rem; font-weight:800;">Arum Dahlia</h1>
+            <div style="font-weight:600; color:var(--stone-700);">AI-Assisted Web Developer · Founder Brand LYONESSE · Lulusan Akuntansi SMK N 2 Blora 2025</div>
+            <div class="font-mono" style="font-size:0.75rem; color:var(--stone-500); display:flex; flex-wrap:wrap; gap:0.5rem;">
+              <span>arumdahlia67@gmail.com</span><span>·</span>
+              <span>lyonessebusiness@gmail.com</span><span>·</span>
+              <span>Blora, Jawa Tengah, Indonesia</span>
+            </div>
+          </div>
+          <div style="width:4.5rem; height:4.5rem; border-radius:0.75rem; background:var(--stone-900); color:#fff; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:800; font-size:1.5rem; flex-shrink:0;">AD</div>
+        </div>
+
+        <div class="stack-xs">
+          <div class="font-mono" style="font-size:0.75rem; font-weight:700; text-transform:uppercase;">Ringkasan Profil &amp; Filosofi Pengembang</div>
+          <p style="color:var(--stone-600);">
+            Lulusan SMK Negeri 2 Blora tahun 2025 jurusan Akuntansi dan Keuangan Lembaga dengan predikat Uji Kompetensi Keahlian (UKK) "Kompeten". Bukan berlatar belakang IT konvensional, melainkan pengembang web modern yang memanfaatkan Artificial Intelligence (AI) sebagai rekan bertukar pikiran untuk memecahkan masalah, menyusun logika, dan membangun aplikasi digital. Saat ini fokus merintis brand pakaian <strong>LYONESSE</strong> berbahan Cotton Combed 20s dan 16s, mendalami keuangan digital, serta gemar membaca literatur investasi klasik.
+          </p>
+        </div>
+
+        <div class="stack-xs">
+          <div class="font-mono" style="font-size:0.75rem; font-weight:700; text-transform:uppercase;">Fokus Proyek Utama &amp; Pengalaman Vokasi</div>
+          <div style="padding-left:0.75rem; border-left:2px solid var(--stone-200);" class="stack-sm">
+            <div>
+              <div class="flex-between"><strong>Brand Clothing LYONESSE — Founder &amp; Financial Strategist</strong><span class="font-mono" style="color:var(--stone-500); font-size:0.75rem;">2025 — Sekarang</span></div>
+              <p style="color:var(--stone-600); font-size:0.75rem;">Merintis lini pakaian streetwear berbahan Cotton Combed 20s dan 16s. Bertanggung jawab atas pemodelan HPP, perhitungan Break-Even Point (BEP), pembukuan, serta pemanfaatan AI untuk strategi brand.</p>
+            </div>
+            <div>
+              <div class="flex-between"><strong>Stasiun Radio Mitra SMK N 2 Blora — PKL Penyiar Radio</strong><span class="font-mono" style="color:var(--stone-500); font-size:0.75rem;">2024</span></div>
+              <p style="color:var(--stone-600); font-size:0.75rem;">Siaran radio langsung dengan predikat <strong>"Sangat Bagus"</strong>, penyusunan naskah publik, dan public speaking.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="stack-xs">
+          <div class="font-mono" style="font-size:0.75rem; font-weight:700; text-transform:uppercase;">Riwayat Pendidikan 12 Tahun</div>
+          <div style="padding-left:0.75rem; border-left:2px solid var(--stone-200); font-size:0.75rem;" class="stack-xs">
+            <div class="flex-between"><span><strong>SMK Negeri 2 Blora</strong> — Akuntansi dan Keuangan Lembaga (AKL)</span><span class="font-mono" style="color:var(--stone-500);">2022 — 2025</span></div>
+            <div class="flex-between"><span><strong>MTs N Blora</strong> — Pendidikan Menengah Pertama</span><span class="font-mono" style="color:var(--stone-500);">2019 — 2022</span></div>
+            <div class="flex-between"><span><strong>SDN Pxxxx</strong> — Pendidikan Dasar</span><span class="font-mono" style="color:var(--stone-500);">2013 — 2019</span></div>
+          </div>
+        </div>
+
+        <div class="stack-xs">
+          <div class="font-mono" style="font-size:0.75rem; font-weight:700; text-transform:uppercase;">Daftar Prestasi &amp; Sertifikasi</div>
+          <div class="grid grid-2-sm" style="gap:0.35rem; font-size:0.75rem; color:var(--stone-700);">
+            <div>• Juara 1 Pencak Silat O2SN Kecamatan (2017)</div>
+            <div>• Juara 2 Pencak Silat O2SN Kecamatan (2018)</div>
+            <div>• Juara 2 Pencak Silat POPDA Kecamatan (2018)</div>
+            <div>• Juara 1 Tim Bola Volly Putri Kecamatan (2019)</div>
+            <div>• Juara 3 Macapat Islami Lomba MAPSI (2018)</div>
+            <div>• Juara Harapan 3 Lomba Tari Klasik (2016)</div>
+            <div>• Medali Perunggu Olimpiade PAI (2022)</div>
+            <div>• Sertifikat UKK Akuntansi — Kompeten (2025)</div>
+            <div>• Sertifikat PKL Penyiar Radio — Sangat Bagus (2024)</div>
+            <div>• Sertifikat Viva Beauty Grooming Profesional (2024)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="no-print" style="padding:0.875rem 1.5rem; background:var(--stone-100); border-top:1px solid var(--stone-200); display:flex; justify-content:flex-end;">
+        <button type="button" id="close-resume-footer" class="btn btn-outline" style="font-size:0.75rem;">Tutup Jendela</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const PAGES = [
+        { id: 'profil', number: '01', title: 'Ringkasan Profil', shortTitle: 'Profil', subtitle: 'Arum Dahlia & Latar Belakang', icon: '🧭' },
+        { id: 'fokus-ai', number: '02', title: 'Fokus Web Developer AI', shortTitle: 'Fokus AI', subtitle: 'Bukan IT · AI sbg Partner', icon: '⚙' },
+        { id: 'lyonesse', number: '03', title: 'Project Brand LYONESSE', shortTitle: 'LYONESSE', subtitle: 'Cotton Combed 20s & 16s', icon: '👕' },
+        { id: 'kalkulator', number: '04', title: 'Laboratorium Kalkulator', shortTitle: 'Kalkulator', subtitle: 'Slider BEP, HPP & Jurnal', icon: '🧮' },
+        { id: 'prestasi', number: '05', title: 'Prestasi & Sertifikasi', shortTitle: 'Prestasi', subtitle: '12 Tahun Sekolah & UKK', icon: '🏆' },
+        { id: 'buku', number: '06', title: 'Buku Bacaan', shortTitle: 'Buku', subtitle: 'Graham & Warren Buffett', icon: '📖' },
+        { id: 'kontak', number: '07', title: 'Kotak Masukan / Hubungi', shortTitle: 'Kontak', subtitle: 'Surel Pribadi & Bisnis', icon: '✉' }
+      ];
+
+      const BOOKS = [
+        {
+          id: 'intelligent-investor',
+          title: 'The Intelligent Investor',
+          author: 'Benjamin Graham',
+          category: 'Analisis Keuangan & Value Investing',
+          coreConcept: 'Margin of Safety (Marjin Keamanan) & Manajemen Risiko Rasional',
+          directQuote: '"The margin of safety is always dependent on the price paid. It will be large at one price, small at some higher price, nonexistent at some still higher price."',
+          reflectionByArum: 'Sebagai lulusan Akuntansi yang merintis brand apparel LYONESSE, buku ini membuka mata saya bahwa bisnis bukan soal spekulasi optimis, melainkan tentang seberapa aman batas toleransi risiko yang kita miliki. Konsep Margin of Safety langsung saya jadikan rumus dalam menghitung BEP produksi: memastikan harga jual dan proyeksi kuantiti memiliki bantalan aman jika biaya kain naik atau permintaan pasar melambat.',
+          practicalApplication: 'Diterapkan dalam kalkulator BEP LYONESSE: menghitung persentase bantalan aman (Margin of Safety) terhadap titik impas produksi kaos Cotton Combed 20s & 16s.',
+          keyTakeaways: [
+            'Margin of Safety sebagai pelindung modal utama',
+            'Memisahkan emosi pasar dari nilai intrinsik bisnis',
+            'Disiplin pencatatan angka dan konservatisme neraca'
+          ]
+        },
+        {
+          id: 'warren-buffett-mindset',
+          title: 'Warren Buffett Mindset: The Snowball Principles',
+          author: 'Alice Schroeder & Warren Buffett Writings',
+          category: 'Pola Pikir Bisnis & Bunga Majemuk',
+          coreConcept: 'Circle of Competence & Pertumbuhan Majemuk Jangka Panjang',
+          directQuote: '"Risk comes from not knowing what you are doing. You don\'t need to be an expert on every company, or even many. You only have to be able to evaluate companies within your circle of competence."',
+          reflectionByArum: 'Warren Buffett mengajarkan kita untuk jujur pada apa yang kita kuasai dan tekun memperlebar lingkaran itu. Saya bukan lulusan IT, tapi saya punya fondasi kuat di akuntansi dan logika bisnis. Dengan menjadikan AI sebagai partner kolaboratif, saya bisa memperlebar kompetensi ke ranah web development secara presisi tanpa kehilangan pijakan pada nilai riil.',
+          practicalApplication: 'Mengadopsi pola pikir jangka panjang dalam pembangunan brand LYONESSE: fokus pada kualitas fisik kain (Combed 16s/20s) dan transparansi struktur biaya daripada sekadar perang harga sesaat.',
+          keyTakeaways: [
+            'Kekuatan waktu dan compound interest (efek bola salju)',
+            'Fokus pada lingkaran kompetensi dan perluasan terukur',
+            'Integritas dan kepuasan pelanggan sebagai aset tak berwujud'
+          ]
+        }
+      ];
+
+      const SEARCH_CORPUS = [
+        { title: 'Ringkasan Profil Arum Dahlia', category: 'Profil Utama', snippet: 'Lulusan SMK Negeri 2 Blora 2025 AKL, AI-Assisted Web Developer & Founder LYONESSE.', targetId: 'profil', tag: 'Identitas' },
+        { title: 'Fokus sebagai Web Developer dengan Bantuan AI', category: 'Filosofi & Alur Kerja', snippet: 'Bukan berlatar belakang IT formal, memanfaatkan AI sebagai partner berpikir dan keuangan digital.', targetId: 'fokus-ai', tag: 'AI-Assisted Dev' },
+        { title: 'Project Brand Clothing LYONESSE', category: 'Proyek Utama', snippet: 'Brand pakaian berbahan Cotton Combed 20s dan 16s yang dirintis bersama rekan.', targetId: 'lyonesse', tag: 'Fashion / Apparel' },
+        { title: 'Kalkulator BEP, HPP & Laba Rugi Real-Time', category: 'Finansial & Akuntansi', snippet: 'Simulasi interaktif Break-Even Point Cotton Combed 20s/16s, diagnosa finansial, dan Jurnal Umum.', targetId: 'kalkulator', tag: 'Unit Economics' },
+        { title: 'Juara 1, 2 Pencak Silat O2SN & POPDA', category: 'Prestasi (SDN Pxxxx)', snippet: 'Juara 1 & 2 Pencak Silat O2SN (2017-2018), Juara 2 POPDA (2018), Juara 1 Voli Putri (2019).', targetId: 'prestasi', tag: '2016-2019' },
+        { title: 'Medali Perunggu Olimpiade Pendidikan Agama Islam', category: 'Prestasi (MTs N Blora)', snippet: 'Medali Perunggu Olimpiade PAI Tahun 2022.', targetId: 'prestasi', tag: '2022' },
+        { title: 'Sertifikat UKK Akuntansi, PKL Radio & Viva Beauty', category: 'Sertifikasi (SMK N 2 Blora)', snippet: 'UKK Akuntansi predikat Kompeten (2025), PKL Penyiar Radio Sangat Bagus (2024), Viva Beauty.', targetId: 'prestasi', tag: '2024-2025' },
+        { title: 'The Intelligent Investor — Benjamin Graham', category: 'Buku & Pola Pikir', snippet: 'Konsep Margin of Safety dan manajemen risiko rasional.', targetId: 'buku', tag: 'Literasi' },
+        { title: 'Warren Buffett Mindset: The Snowball Principles', category: 'Buku & Pola Pikir', snippet: 'Circle of Competence dan efek pertumbuhan majemuk jangka panjang.', targetId: 'buku', tag: 'Literasi' }
+      ];
+
+      let activePage = 'profil';
+      let selectedBookId = BOOKS[0].id;
+      let activeCalcTab = 'bep';
+      const CALC_TABS = ['bep', 'pnl', 'journal', 'cycle'];
+
+      const state = {
+        fabric: '20s',
+        price: 135000,
+        fabricCost: 36000,
+        sewingCost: 14000,
+        printCost: 12000,
+        nameTagCost: 2500,
+        packagingCost: 2500,
+        rentCost: 1500000,
+        aiCost: 850000,
+        marketingCost: 1200000,
+        volume: 150
+      };
+
+      const formatIDR = (n) => new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(n);
+
+      /* ---------- NAVIGATION (NO SCROLL DOWN, ALWAYS TOP OF CHOSEN PAGE) ---------- */
+      function parseHash() {
+        const raw = window.location.hash.replace(/^#\/?/, '').trim();
+        return PAGES.some((p) => p.id === raw) ? raw : 'profil';
+      }
+
+      function navigateTo(pageId, updateHistory = true) {
+        if (!PAGES.some((p) => p.id === pageId)) pageId = 'profil';
+        activePage = pageId;
+
+        if (updateHistory && window.location.hash !== '#/' + pageId) {
+          window.history.pushState({ page: pageId }, '', '#/' + pageId);
+        }
+
+        PAGES.forEach((p) => {
+          const sec = document.getElementById('page-' + p.id);
+          if (sec) sec.classList.toggle('active', p.id === pageId);
+        });
+
+        document.querySelectorAll('[data-nav]').forEach((el) => {
+          const target = el.getAttribute('data-nav');
+          if (el.classList.contains('nav-link') || el.classList.contains('mobile-nav-link')) {
+            el.classList.toggle('active', target === pageId);
+          }
+          if (el.id === 'nav-cta-kontak') {
+            el.classList.toggle('active-ring', pageId === 'kontak');
+          }
+        });
+
+        const idx = PAGES.findIndex((p) => p.id === pageId);
+        const meta = PAGES[idx];
+        const bcBar = document.getElementById('breadcrumb-bar');
+        if (pageId === 'profil') {
+          bcBar.classList.add('hidden');
+        } else {
+          bcBar.classList.remove('hidden');
+          document.getElementById('breadcrumb-current').textContent = meta.number + '. ' + meta.title;
+          document.getElementById('breadcrumb-counter').textContent = 'Halaman ' + (idx + 1) + ' dari ' + PAGES.length;
+        }
+
+        document.getElementById('tools-active-label').textContent = meta.title;
+        document.getElementById('tools-calc-shortcut').classList.toggle('active', pageId === 'kalkulator');
+        document.getElementById('mobile-menu-panel').classList.add('hidden');
+
+        renderBottomMiniNav();
+        renderFooterLinks();
+        renderDirectoryGrid();
+        window.scrollTo({ top: 0, behavior: 'auto' });
+      }
+
+      function renderDirectoryGrid() {
+        const grid = document.getElementById('hero-directory-grid');
+        grid.innerHTML = PAGES.map((p) => {
+          const isCur = p.id === 'profil';
+          return '<a href="#/' + p.id + '" data-nav="' + p.id + '" class="jump-card ' + (isCur ? 'active' : '') + '">' +
+            '<div class="flex-between" style="margin-bottom:0.5rem;">' +
+              '<span class="jump-icon">' + p.icon + '</span>' +
+              '<span class="font-mono" style="font-size:0.625rem; color:var(--stone-400);">' + p.number + '</span>' +
+            '</div>' +
+            '<div>' +
+              '<div style="font-size:0.75rem; font-weight:700; line-height:1.3;">' + p.title + '</div>' +
+              '<div style="font-size:0.6875rem; opacity:0.75; margin-top:2px;">' + p.subtitle + '</div>' +
+            '</div>' +
+          '</a>';
+        }).join('');
+      }
+
+      function renderBottomMiniNav() {
+        const container = document.getElementById('bottom-mini-nav');
+        container.innerHTML = PAGES.map((p) => {
+          const isActive = p.id === activePage;
+          return '<button type="button" data-nav="' + p.id + '" class="mini-page-btn ' + (isActive ? 'active' : '') + '">' +
+            '<span class="font-mono" style="font-size:0.625rem; opacity:0.75;">' + p.number + '</span>' +
+            '<span>' + p.shortTitle + '</span>' +
+          '</button>';
+        }).join('');
+
+        const idx = PAGES.findIndex((p) => p.id === activePage);
+        const prev = idx > 0 ? PAGES[idx - 1] : null;
+        const next = idx < PAGES.length - 1 ? PAGES[idx + 1] : null;
+
+        document.getElementById('stepper-prev-slot').innerHTML = prev
+          ? '<button type="button" data-nav="' + prev.id + '" class="btn btn-outline" style="font-size:0.75rem; padding:0.4rem 0.75rem;">‹ Sebelumnya: ' + prev.shortTitle + '</button>'
+          : '<span class="font-mono" style="font-size:0.6875rem; color:var(--stone-400);">Halaman Awal</span>';
+
+        document.getElementById('stepper-next-slot').innerHTML = next
+          ? '<button type="button" data-nav="' + next.id + '" class="btn btn-primary" style="font-size:0.75rem; padding:0.4rem 0.875rem;">Selanjutnya: ' + next.shortTitle + ' ›</button>'
+          : '<button type="button" data-nav="profil" class="btn btn-outline" style="font-size:0.75rem; padding:0.4rem 0.875rem;">⌂ Kembali ke Profil</button>';
+      }
+
+      function renderFooterLinks() {
+        const container = document.getElementById('footer-links');
+        container.innerHTML = PAGES.map((p) => {
+          const isActive = p.id === activePage;
+          const label = p.shortTitle === 'Kontak' ? 'Kotak Masukan' : p.title;
+          return '<a href="#/' + p.id + '" data-nav="' + p.id + '" style="' + (isActive ? 'color:#fff; font-weight:600; text-decoration:underline;' : '') + '">' + label + '</a>';
+        }).join('');
+      }
+
+      document.addEventListener('click', (e) => {
+        const navTarget = e.target.closest('[data-nav]');
+        if (navTarget) {
+          e.preventDefault();
+          navigateTo(navTarget.getAttribute('data-nav'));
+        }
+      });
+
+      window.addEventListener('hashchange', () => navigateTo(parseHash(), false));
+      window.addEventListener('popstate', () => navigateTo(parseHash(), false));
+
+      /* ---------- HERO CONSOLE TABS ---------- */
+      const CODE_SNIPPETS = {
+        architecture:
+          '<p style="color:var(--stone-500)">// Project Konfigurasi Brand LYONESSE</p>' +
+          '<p><span style="color:var(--amber-400)">export const</span> brandProfile = {</p>' +
+          '<p style="padding-left:1rem">name: <span style="color:var(--emerald-400)">\'LYONESSE\'</span>,</p>' +
+          '<p style="padding-left:1rem">role: <span style="color:var(--emerald-400)">\'Founder &amp; Financial Strategist\'</span>,</p>' +
+          '<p style="padding-left:1rem">fabricYarn: [<span style="color:var(--emerald-400)">\'Cotton Combed 20s\'</span>, <span style="color:var(--emerald-400)">\'Cotton Combed 16s\'</span>],</p>' +
+          '<p style="padding-left:1rem">accountingStandard: <span style="color:var(--emerald-400)">\'Double-Entry GAAP/SAK\'</span>,</p>' +
+          '<p style="padding-left:1rem">engineeringApproach: <span style="color:var(--emerald-400)">\'AI-Augmented Full-Stack\'</span>,</p>' +
+          '<p style="padding-left:1rem">status: <span style="color:var(--emerald-400)">\'Active Production &amp; Model Testing\'</span></p>' +
+          '<p>};</p>' +
+          '<p style="color:var(--stone-500); margin-top:0.5rem;">// Verifikasi neraca otomatis real-time</p>' +
+          '<p><span style="color:var(--amber-400)">const</span> verifyLedger = (debit, credit) =&gt; debit === credit;</p>',
+        economics:
+          '<p style="color:var(--stone-500)">// Logika Perhitungan BEP Unit &amp; Rupiah</p>' +
+          '<p><span style="color:var(--amber-400)">function</span> <span style="color:var(--blue-400)">calculateBEP</span>(fc: number, price: number, vc: number) {</p>' +
+          '<p style="padding-left:1rem">const unitMargin = price - vc; <span style="color:var(--stone-500)">// Margin Kontribusi</span></p>' +
+          '<p style="padding-left:1rem">if (unitMargin &lt;= 0) throw new Error(<span style="color:var(--rose-400)">\'Harga &lt; HPP!\'</span>);</p>' +
+          '<p style="padding-left:1rem">const bepUnits = Math.ceil(fc / unitMargin);</p>' +
+          '<p style="padding-left:1rem">const bepRupiah = bepUnits * price;</p>' +
+          '<p style="padding-left:1rem">return { bepUnits, bepRupiah, unitMargin };</p>' +
+          '<p>}</p>' +
+          '<p style="color:var(--stone-500); margin-top:0.5rem;">// Menghitung HPP komprehensif (kain, jahit, sablon, aksesoris, &amp; packaging)</p>',
+        aiPrompt:
+          '<p style="color:var(--stone-500)"># Protokol Kolaborasi Arum bersama AI</p>' +
+          '<p><span style="color:var(--amber-400)">1. Problem Definition:</span> Identifikasi kebutuhan akuntansi / web</p>' +
+          '<p><span style="color:var(--amber-400)">2. Prompting Strategy:</span> Berikan konteks SAK, HPP, &amp; arsitektur</p>' +
+          '<p><span style="color:var(--amber-400)">3. Human Review:</span> Arum memverifikasi akurasi rumus neraca</p>' +
+          '<p><span style="color:var(--amber-400)">4. Execution:</span> Deploy antarmuka responsif tanpa error</p>' +
+          '<p style="color:var(--emerald-400); margin-top:0.5rem;">&gt; "AI mempercepat eksekusi, ketelitian akuntansi menjamin kebenaran."</p>'
+      };
+
+      function setCodeTab(tab) {
+        document.getElementById('console-body').innerHTML = CODE_SNIPPETS[tab];
+        document.querySelectorAll('[data-code-tab]').forEach((btn) => {
+          btn.classList.toggle('active', btn.getAttribute('data-code-tab') === tab);
+        });
+      }
+      document.querySelectorAll('[data-code-tab]').forEach((btn) => {
+        btn.addEventListener('click', () => setCodeTab(btn.getAttribute('data-code-tab')));
+      });
+      setCodeTab('architecture');
+
+      /* ---------- CALCULATOR ENGINE ---------- */
+      function syncSlidersFromState() {
+        document.getElementById('slider-volume').value = state.volume;
+        document.getElementById('slider-price').value = state.price;
+        document.getElementById('slider-fabric').value = state.fabricCost;
+        document.getElementById('slider-sewing').value = state.sewingCost;
+        document.getElementById('slider-print').value = state.printCost;
+        document.getElementById('slider-nametag').value = state.nameTagCost;
+        document.getElementById('slider-packaging').value = state.packagingCost;
+        document.getElementById('slider-fixed').value = state.rentCost + state.aiCost + state.marketingCost;
+      }
+
+      function applyFabricPreset(fabric) {
+        state.fabric = fabric;
+        if (fabric === '20s') {
+          Object.assign(state, {
+            price: 135000, fabricCost: 36000, sewingCost: 14000, printCost: 12000,
+            nameTagCost: 2500, packagingCost: 2500,
+            rentCost: 1500000, aiCost: 850000, marketingCost: 1200000, volume: 150
+          });
+        } else {
+          Object.assign(state, {
+            price: 169000, fabricCost: 48000, sewingCost: 16000, printCost: 14000,
+            nameTagCost: 4000, packagingCost: 3500,
+            rentCost: 1800000, aiCost: 950000, marketingCost: 1500000, volume: 120
+          });
+        }
+        document.getElementById('preset-btn-20s').classList.toggle('active', fabric === '20s');
+        document.getElementById('preset-btn-16s').classList.toggle('active', fabric === '16s');
+        document.getElementById('calc-mode-badge').textContent = 'Mode Aktif: Cotton Combed ' + fabric;
+        syncSlidersFromState();
+        updateCalculatorUI();
+      }
+
+      function setCalcTab(tab) {
+        activeCalcTab = tab;
+        const idx = CALC_TABS.indexOf(tab);
+        document.getElementById('calc-slide-counter').textContent = 'Slide ' + (idx + 1) + '/4';
+        CALC_TABS.forEach((t) => {
+          document.getElementById('calc-panel-' + t).classList.toggle('hidden', t !== tab);
+        });
+        document.querySelectorAll('[data-calc-tab]').forEach((b) => {
+          b.classList.toggle('active', b.getAttribute('data-calc-tab') === tab);
+        });
+      }
+
+      function updateCalculatorUI() {
+        const hppUnit = state.fabricCost + state.sewingCost + state.printCost + state.nameTagCost + state.packagingCost;
+        const fixedTotal = state.rentCost + state.aiCost + state.marketingCost;
+        const cm = state.price - hppUnit;
+        const cmRatio = state.price > 0 ? cm / state.price : 0;
+        const bepUnits = cm > 0 ? Math.ceil(fixedTotal / cm) : 0;
+        const bepRupiah = cmRatio > 0 ? Math.round(fixedTotal / cmRatio) : 0;
+        const mos = state.volume > 0 && bepUnits > 0 ? Math.round(((state.volume - bepUnits) / state.volume) * 100) : 0;
+
+        const revenue = state.volume * state.price;
+        const totFabric = state.volume * state.fabricCost;
+        const totSewing = state.volume * state.sewingCost;
+        const totPrint = state.volume * state.printCost;
+        const totNameTag = state.volume * state.nameTagCost;
+        const totPack = state.volume * state.packagingCost;
+        const totHpp = state.volume * hppUnit;
+        const grossProfit = revenue - totHpp;
+        const grossMargin = revenue > 0 ? (grossProfit / revenue) * 100 : 0;
+        const netProfit = grossProfit - fixedTotal;
+        const netMargin = revenue > 0 ? (netProfit / revenue) * 100 : 0;
+
+        // Labels next to sliders
+        document.getElementById('val-volume').textContent = state.volume + ' Pcs';
+        document.getElementById('inline-bep-hint').textContent = bepUnits + ' pcs';
+        document.getElementById('val-price').textContent = formatIDR(state.price);
+        document.getElementById('lbl-fabric').textContent = '1. Bahan Baku Kain Cotton Combed ' + state.fabric + ':';
+        document.getElementById('val-fabric').textContent = formatIDR(state.fabricCost);
+        document.getElementById('val-sewing').textContent = formatIDR(state.sewingCost);
+        document.getElementById('val-print').textContent = formatIDR(state.printCost);
+        document.getElementById('val-nametag').textContent = formatIDR(state.nameTagCost);
+        document.getElementById('val-packaging').textContent = formatIDR(state.packagingCost);
+        document.getElementById('val-hpp-pill').textContent = 'HPP: ' + formatIDR(hppUnit) + ' / pcs';
+        document.getElementById('val-hpp-total').textContent = formatIDR(hppUnit);
+        document.getElementById('val-fixed').textContent = formatIDR(fixedTotal);
+        document.getElementById('val-fixed-split').innerHTML =
+          '<span>Sewa studio (' + formatIDR(state.rentCost) + ')</span>' +
+          '<span>AI &amp; utilitas (' + formatIDR(state.aiCost) + ')</span>' +
+          '<span>Iklan (' + formatIDR(state.marketingCost) + ')</span>';
+
+        // Diagnosa Kesehatan Finansial (At Top)
+        const hCard = document.getElementById('health-diagnosis-card');
+        hCard.className = 'health-card';
+        let hLabel, hSummary, hAdvice;
+        if (cm <= 0) {
+          hCard.classList.add('health-danger');
+          hLabel = '⚠ Diagnosa Kesehatan Finansial: TIDAK SEHAT (RUGI PRODUKSI)';
+          hSummary = 'Harga jual (' + formatIDR(state.price) + ') lebih kecil dari total HPP variabel (' + formatIDR(hppUnit) + '). Setiap kaos yang terjual mengalami rugi langsung!';
+          hAdvice = 'Naikkan harga jual minimal di atas ' + formatIDR(hppUnit + 25000) + ' atau tekan komponen HPP agar margin kontribusi bernilai positif.';
+        } else if (state.volume < bepUnits) {
+          hCard.classList.add('health-warning');
+          hLabel = '⚠ Diagnosa Kesehatan Finansial: DEFISIT (DI BAWAH TITIK IMPAS BEP)';
+          hSummary = 'Target penjualan (' + state.volume + ' pcs) belum mencapai titik impas BEP (' + bepUnits + ' pcs). Terjadi proyeksi defisit operasional ' + formatIDR(Math.abs(netProfit)) + '.';
+          hAdvice = 'Perlu tambahan penjualan minimal ' + (bepUnits - state.volume) + ' pcs lagi untuk mencapai titik impas BEP, atau kurangi biaya operasional tetap.';
+        } else if (netMargin < 15) {
+          hCard.classList.add('health-moderate');
+          hLabel = '⚠ Diagnosa Kesehatan Finansial: CUKUP SEHAT (MARGIN TIPIS)';
+          hSummary = 'Bisnis berhasil melewati titik impas BEP dengan margin aman ' + mos + '%, namun laba bersih relatif tipis (' + netMargin.toFixed(1) + '%).';
+          hAdvice = 'Pertahankan efisiensi HPP dan pembelian bahan kain skala rol besar untuk meningkatkan laba bersih.';
+        } else {
+          hCard.classList.add('health-healthy');
+          hLabel = '✓ Diagnosa Kesehatan Finansial: SANGAT SEHAT & PROFITABLE (SESUAI BEP)';
+          hSummary = 'Struktur keuangan sangat ideal & sehat! Margin laba bersih ' + netMargin.toFixed(1) + '% dengan Margin of Safety ' + mos + '% di atas titik impas BEP.';
+          hAdvice = 'Arus kas sangat kuat untuk membiayai batch produksi kaos Cotton Combed ' + state.fabric + ' berikutnya serta ekspansi varian warna baru.';
+        }
+        document.getElementById('health-label').textContent = hLabel;
+        document.getElementById('health-metrics-line').innerHTML =
+          'BEP: <strong>' + bepUnits + ' pcs</strong> (' + formatIDR(bepRupiah) + ') · Target: <strong>' + state.volume + ' pcs</strong> · Net Margin: <strong>' + netMargin.toFixed(1) + '%</strong>';
+        document.getElementById('health-summary').textContent = hSummary;
+        document.getElementById('health-advice').innerHTML = '<strong>Rekomendasi Akuntansi:</strong> ' + hAdvice;
+
+        // Right Column BEP Output & HPP Breakdown
+        document.getElementById('out-fabric-label').textContent = 'Combed ' + state.fabric;
+        document.getElementById('out-bep-units').innerHTML = bepUnits + ' <span style="font-size:0.875rem; font-weight:400; color:var(--stone-400);">pcs</span>';
+        document.getElementById('out-bep-rupiah').textContent = formatIDR(bepRupiah);
+        document.getElementById('out-cm-unit').textContent = formatIDR(cm);
+        document.getElementById('out-cm-ratio').textContent = (cmRatio * 100).toFixed(1) + '%';
+        const mosEl = document.getElementById('out-mos');
+        mosEl.textContent = mos + '%';
+        mosEl.style.color = mos >= 0 ? 'var(--emerald-400)' : 'var(--rose-400)';
+        document.getElementById('out-pnl-connection').innerHTML =
+          '<div><strong>Koneksi Langsung ke Laba Rugi:</strong></div>' +
+          '<div>Penjualan ' + state.volume + ' pcs menghasilkan omzet <strong>' + formatIDR(revenue) + '</strong> dengan proyeksi laba bersih <strong>' + formatIDR(netProfit) + '</strong> (' + netMargin.toFixed(1) + '%).</div>';
+
+        document.getElementById('out-hpp-unit-comp').textContent = formatIDR(hppUnit);
+        const hppRows = [
+          ['Kain Combed ' + state.fabric, state.fabricCost],
+          ['Jahit Rantai & Obras', state.sewingCost],
+          ['Sablon Plastisol / Bordir', state.printCost],
+          ['Aksesoris & Label Name Tag', state.nameTagCost],
+          ['Packaging & Stiker', state.packagingCost]
+        ];
+        document.getElementById('out-hpp-breakdown').innerHTML = hppRows.map((r) =>
+          '<div class="flex-between"><span>' + r[0] + ':</span><strong class="font-mono" style="color:var(--stone-800)">' + formatIDR(r[1]) + ' (' + ((r[1] / hppUnit) * 100).toFixed(0) + '%)</strong></div>'
+        ).join('');
+        document.getElementById('out-hpp-accum-note').innerHTML =
+          'Total HPP untuk target ' + state.volume + ' pcs adalah <strong>' + formatIDR(totHpp) + '</strong> (' + (state.price > 0 ? ((hppUnit / state.price) * 100).toFixed(1) : 0) + '% dari harga jual).';
+
+        // Tab 2: P&L Table
+        document.getElementById('pnl-subtitle').textContent =
+          'Otomatis terhubung dengan slider BEP: target penjualan ' + state.volume + ' pcs kaos Cotton Combed ' + state.fabric + '.';
+        document.getElementById('pnl-net-pill').textContent = 'Laba Bersih: ' + formatIDR(netProfit) + ' (' + netMargin.toFixed(1) + '%)';
+        document.getElementById('pnl-col-total-hdr').textContent = 'Total Akumulasi (' + state.volume + ' pcs)';
+        const pct = (val) => (revenue > 0 ? ((val / revenue) * 100).toFixed(1) : '0') + '%';
+        document.getElementById('pnl-tbody').innerHTML =
+          '<tr style="font-weight:600;"><td>Pendapatan Penjualan Bersih (Revenue)</td><td class="text-right font-mono">' + formatIDR(state.price) + '</td><td class="text-right font-mono">' + formatIDR(revenue) + '</td><td class="text-right font-mono">100.0%</td></tr>' +
+          '<tr><td style="padding-left:2rem; color:var(--stone-600);">· Bahan Baku Kain Combed ' + state.fabric + '</td><td class="text-right font-mono" style="color:var(--rose-600)">(' + formatIDR(state.fabricCost) + ')</td><td class="text-right font-mono" style="color:var(--rose-600)">(' + formatIDR(totFabric) + ')</td><td class="text-right font-mono">' + pct(totFabric) + '</td></tr>' +
+          '<tr><td style="padding-left:2rem; color:var(--stone-600);">· Ongkos Jahit Rantai &amp; Obras</td><td class="text-right font-mono" style="color:var(--rose-600)">(' + formatIDR(state.sewingCost) + ')</td><td class="text-right font-mono" style="color:var(--rose-600)">(' + formatIDR(totSewing) + ')</td><td class="text-right font-mono">' + pct(totSewing) + '</td></tr>' +
+          '<tr><td style="padding-left:2rem; color:var(--stone-600);">· Sablon Plastisol / Bordir</td><td class="text-right font-mono" style="color:var(--rose-600)">(' + formatIDR(state.printCost) + ')</td><td class="text-right font-mono" style="color:var(--rose-600)">(' + formatIDR(totPrint) + ')</td><td class="text-right font-mono">' + pct(totPrint) + '</td></tr>' +
+          '<tr><td style="padding-left:2rem; color:var(--stone-600);">· Aksesoris &amp; Label Name Tag</td><td class="text-right font-mono" style="color:var(--rose-600)">(' + formatIDR(state.nameTagCost) + ')</td><td class="text-right font-mono" style="color:var(--rose-600)">(' + formatIDR(totNameTag) + ')</td><td class="text-right font-mono">' + pct(totNameTag) + '</td></tr>' +
+          '<tr><td style="padding-left:2rem; color:var(--stone-600);">· Packaging &amp; Stiker</td><td class="text-right font-mono" style="color:var(--rose-600)">(' + formatIDR(state.packagingCost) + ')</td><td class="text-right font-mono" style="color:var(--rose-600)">(' + formatIDR(totPack) + ')</td><td class="text-right font-mono">' + pct(totPack) + '</td></tr>' +
+          '<tr style="background:var(--stone-50); font-weight:700; border-top:1px solid var(--stone-200);"><td>Laba Kotor (Gross Profit)</td><td class="text-right font-mono">' + formatIDR(cm) + '</td><td class="text-right font-mono">' + formatIDR(grossProfit) + '</td><td class="text-right font-mono">' + grossMargin.toFixed(1) + '%</td></tr>' +
+          '<tr><td style="padding-left:2rem; color:var(--stone-600);">Beban Tetap Operasional (Sewa, AI Tools, Promosi)</td><td class="text-right font-mono" style="color:var(--stone-500)">—</td><td class="text-right font-mono" style="color:var(--rose-600)">(' + formatIDR(fixedTotal) + ')</td><td class="text-right font-mono">' + pct(fixedTotal) + '</td></tr>' +
+          '<tr style="background:var(--stone-100); font-weight:800; border-top:2px solid var(--stone-300); font-size:0.9375rem;"><td>Laba Bersih Operasional (Net Profit)</td><td class="text-right font-mono">' + formatIDR(Math.round(netProfit / (state.volume || 1))) + '</td><td class="text-right font-mono" style="color:' + (netProfit >= 0 ? 'var(--emerald-700)' : 'var(--rose-700)') + '">' + formatIDR(netProfit) + '</td><td class="text-right font-mono" style="color:' + (netMargin >= 0 ? 'var(--emerald-700)' : 'var(--rose-700)') + '">' + netMargin.toFixed(1) + '%</td></tr>';
+
+        // Tab 3: Double-Entry Journal (11 Entries)
+        const entries = [
+          ['2026-03-02', '113 - Persediaan Bahan Kain', 'Persediaan Bahan Baku (Cotton Combed ' + state.fabric + ')', 'Pengadaan kain combed ' + state.fabric + ' untuk ' + state.volume + ' pcs (@ ' + formatIDR(state.fabricCost) + ')', totFabric, 0],
+          ['2026-03-02', '114 - Persediaan Aksesoris & Name Tag', 'Persediaan Woven Name Tag & Packaging', 'Pengadaan label name tag (@ ' + formatIDR(state.nameTagCost) + ') & packaging zipper (@ ' + formatIDR(state.packagingCost) + ')', totNameTag + totPack, 0],
+          ['2026-03-02', '101 - Kas & Bank Usaha', 'Kas & Bank Usaha LYONESSE', 'Pembayaran tunai bahan kain, label name tag, dan packaging', 0, totFabric + totNameTag + totPack],
+          ['2026-03-10', '115 - Barang Dalam Proses (Konveksi)', 'Ongkos Vendor Jahit & Sablon Kaos', 'Biaya jahit rantai (@ ' + formatIDR(state.sewingCost) + ') dan sablon (@ ' + formatIDR(state.printCost) + ')', totSewing + totPrint, 0],
+          ['2026-03-10', '101 - Kas & Bank Usaha', 'Kas & Bank Usaha LYONESSE', 'Pembayaran jasa jahit dan sablon vendor konveksi', 0, totSewing + totPrint],
+          ['2026-03-15', '501 - Beban Operasional & AI Subscription', 'Beban Tetap: Studio, Listrik, AI Tools & Iklan', 'Alokasi beban sewa studio, internet, AI software, dan promosi', fixedTotal, 0],
+          ['2026-03-15', '101 - Kas & Bank Usaha', 'Kas & Bank Usaha LYONESSE', 'Pembayaran utilitas dan beban tetap operasional bulanan', 0, fixedTotal],
+          ['2026-03-28', '101 - Kas / Piutang Penjualan', 'Kas dari Penjualan Kaos', 'Penerimaan omzet penjualan ' + state.volume + ' pcs kaos LYONESSE (@ ' + formatIDR(state.price) + ')', revenue, 0],
+          ['2026-03-28', '401 - Pendapatan Penjualan Apparel', 'Pendapatan Penjualan Kaos LYONESSE', 'Pengakuan pendapatan penjualan ' + state.volume + ' pcs kaos Cotton Combed ' + state.fabric, 0, revenue],
+          ['2026-03-28', '500 - Harga Pokok Penjualan (HPP)', 'Harga Pokok Penjualan (COGS)', 'Pengakuan HPP ' + state.volume + ' pcs (Kain + Jahit + Sablon + Name Tag + Packaging)', totHpp, 0],
+          ['2026-03-28', '113 - Persediaan Barang Jadi', 'Persediaan Kaos LYONESSE', 'Pengeluaran persediaan barang jadi yang telah terjual', 0, totHpp]
+        ];
+        const totDebit = entries.reduce((s, e) => s + e[4], 0);
+        const totCredit = entries.reduce((s, e) => s + e[5], 0);
+        document.getElementById('journal-tbody').innerHTML = entries.map((e) =>
+          '<tr>' +
+            '<td class="font-mono" style="font-size:0.75rem; color:var(--stone-500); white-space:nowrap;">' + e[0] + '<br><span style="font-size:0.6875rem; color:var(--stone-400);">' + e[1] + '</span></td>' +
+            '<td><div style="font-weight:600;' + (e[5] > 0 ? ' padding-left:1.5rem; color:var(--stone-700);' : '') + '">' + e[2] + '</div><div style="font-size:0.75rem; color:var(--stone-500);">' + e[3] + '</div></td>' +
+            '<td class="text-right font-mono">' + (e[4] > 0 ? formatIDR(e[4]) : '—') + '</td>' +
+            '<td class="text-right font-mono">' + (e[5] > 0 ? formatIDR(e[5]) : '—') + '</td>' +
+          '</tr>'
+        ).join('');
+        document.getElementById('journal-tfoot').innerHTML =
+          '<tr><td colspan="2">Total Akumulasi Debit &amp; Kredit Jurnal <span style="font-weight:400; font-size:0.75rem; color:var(--stone-500); margin-left:0.5rem;">(Prinsip Akuntansi Berpasangan)</span></td>' +
+          '<td class="text-right font-mono">' + formatIDR(totDebit) + '</td><td class="text-right font-mono">' + formatIDR(totCredit) + '</td></tr>';
+        document.getElementById('journal-balance-badge').textContent = totDebit === totCredit ? '✓ Jurnal Seimbang (Balance)' : '⚠ Terjadi Selisih';
+        document.getElementById('journal-note').innerHTML =
+          '<strong>Penjelasan Akuntansi oleh Arum Dahlia:</strong> Transaksi JE-02 mencatat pengadaan aksesoris label dan kemasan senilai ' + formatIDR(totNameTag + totPack) + ' sebagai persediaan lancar sebelum diakui ke beban pokok penjualan (JE-10) saat kaos berhasil terjual.';
+
+        // Tab 4: Job Order Costing & Trial Balance
+        document.getElementById('cycle-batch-tag').textContent = 'Batch #' + state.fabric + '-2026';
+        document.getElementById('cycle-job-note').textContent = '*Menghitung akumulasi biaya langsung per batch produksi kaos ' + state.fabric + '.';
+        document.getElementById('cycle-job-rows').innerHTML =
+          '<div class="flex-between" style="padding:0.25rem 0; border-bottom:1px solid var(--stone-200);"><span>Biaya Bahan Baku Langsung (Kain Combed):</span><strong class="font-mono">' + formatIDR(totFabric) + '</strong></div>' +
+          '<div class="flex-between" style="padding:0.25rem 0; border-bottom:1px solid var(--stone-200); color:var(--amber-950);"><span>Biaya Bahan Penolong (Name Tag &amp; Packaging):</span><strong class="font-mono">' + formatIDR(totNameTag + totPack) + '</strong></div>' +
+          '<div class="flex-between" style="padding:0.25rem 0; border-bottom:1px solid var(--stone-200);"><span>Biaya Tenaga Kerja Langsung (Jahit):</span><strong class="font-mono">' + formatIDR(totSewing) + '</strong></div>' +
+          '<div class="flex-between" style="padding:0.25rem 0; border-bottom:1px solid var(--stone-200);"><span>Biaya Overhead Pabrik (Sablon):</span><strong class="font-mono">' + formatIDR(totPrint) + '</strong></div>' +
+          '<div class="flex-between" style="padding:0.5rem; background:#fff; border:1px solid var(--stone-200); border-radius:0.375rem; font-weight:700;"><span>Total Harga Pokok Produksi (HPP):</span><span class="font-mono">' + formatIDR(totHpp) + '</span></div>';
+
+        document.getElementById('cycle-trial-rows').innerHTML =
+          '<div class="flex-between" style="padding:0.25rem 0; border-bottom:1px solid var(--stone-200);"><span>Kas &amp; Bank Akhir:</span><strong class="font-mono">' + formatIDR(revenue - totHpp - fixedTotal + 5000000) + '</strong></div>' +
+          '<div class="flex-between" style="padding:0.25rem 0; border-bottom:1px solid var(--stone-200);"><span>Persediaan Bahan &amp; Name Tag:</span><strong class="font-mono">Rp 0 (Selesai Produksi)</strong></div>' +
+          '<div class="flex-between" style="padding:0.25rem 0; border-bottom:1px solid var(--stone-200);"><span>Beban Pokok Penjualan (HPP):</span><strong class="font-mono">' + formatIDR(totHpp) + '</strong></div>' +
+          '<div class="flex-between" style="padding:0.25rem 0; border-bottom:1px solid var(--stone-200);"><span>Beban Operasional &amp; AI:</span><strong class="font-mono">' + formatIDR(fixedTotal) + '</strong></div>' +
+          '<div class="flex-between" style="padding:0.5rem; background:#fff; border:1px solid var(--stone-200); border-radius:0.375rem; font-weight:700;"><span>Pendapatan Penjualan (Kredit):</span><span class="font-mono">' + formatIDR(revenue) + '</span></div>';
+      }
+
+      document.getElementById('preset-btn-20s').addEventListener('click', () => applyFabricPreset('20s'));
+      document.getElementById('preset-btn-16s').addEventListener('click', () => applyFabricPreset('16s'));
+      document.getElementById('btn-scenario-reset').addEventListener('click', () => applyFabricPreset(state.fabric));
+      document.getElementById('btn-scenario-scale').addEventListener('click', () => {
+        state.volume = 250;
+        state.packagingCost = state.fabric === '20s' ? 2000 : 2800;
+        syncSlidersFromState();
+        updateCalculatorUI();
+      });
+      document.getElementById('btn-scenario-promo').addEventListener('click', () => {
+        state.price = state.fabric === '20s' ? 119000 : 145000;
+        state.volume = 230;
+        syncSlidersFromState();
+        updateCalculatorUI();
+      });
+
+      const sliderMap = [
+        ['slider-volume', 'volume'],
+        ['slider-price', 'price'],
+        ['slider-fabric', 'fabricCost'],
+        ['slider-sewing', 'sewingCost'],
+        ['slider-print', 'printCost'],
+        ['slider-nametag', 'nameTagCost'],
+        ['slider-packaging', 'packagingCost']
+      ];
+      sliderMap.forEach(([id, key]) => {
+        document.getElementById(id).addEventListener('input', (e) => {
+          state[key] = Number(e.target.value);
+          updateCalculatorUI();
+        });
+      });
+      document.getElementById('slider-fixed').addEventListener('input', (e) => {
+        const val = Number(e.target.value);
+        state.rentCost = Math.round(val * 0.45);
+        state.aiCost = Math.round(val * 0.25);
+        state.marketingCost = val - state.rentCost - state.aiCost;
+        updateCalculatorUI();
+      });
+
+      document.querySelectorAll('[data-calc-tab]').forEach((b) => {
+        b.addEventListener('click', () => setCalcTab(b.getAttribute('data-calc-tab')));
+      });
+      document.querySelectorAll('[data-jump-tab]').forEach((b) => {
+        b.addEventListener('click', () => setCalcTab(b.getAttribute('data-jump-tab')));
+      });
+      document.getElementById('calc-prev-slide').addEventListener('click', () => {
+        const i = CALC_TABS.indexOf(activeCalcTab);
+        setCalcTab(CALC_TABS[i > 0 ? i - 1 : CALC_TABS.length - 1]);
+      });
+      document.getElementById('calc-next-slide').addEventListener('click', () => {
+        const i = CALC_TABS.indexOf(activeCalcTab);
+        setCalcTab(CALC_TABS[(i + 1) % CALC_TABS.length]);
+      });
+
+      /* ---------- READING LIST BOOKS ---------- */
+      function renderBooks() {
+        const grid = document.getElementById('books-grid');
+        grid.innerHTML = BOOKS.map((b) => {
+          const sel = b.id === selectedBookId;
+          return '<div class="book-card ' + (sel ? 'selected' : '') + '" data-book-id="' + b.id + '">' +
+            '<div class="stack-sm">' +
+              '<div class="flex-between" style="font-size:0.75rem; color:var(--stone-500);">' +
+                '<span class="font-mono" style="font-weight:600; color:var(--stone-600);">' + b.category + '</span>' +
+                '<span>' + b.author + '</span>' +
+              '</div>' +
+              '<h3 style="font-size:1.35rem; font-weight:700;">' + b.title + '</h3>' +
+              '<div class="card" style="padding:0.75rem; font-size:0.75rem; font-weight:500;">🎯 <strong>Konsep Kunci:</strong> ' + b.coreConcept + '</div>' +
+              '<div style="padding:1rem; background:var(--stone-900); color:var(--stone-100); border-radius:0.75rem;">' +
+                '<div class="font-mono" style="font-size:0.6875rem; color:var(--stone-400); margin-bottom:0.35rem;">❝ Kutipan Penting dari Buku:</div>' +
+                '<p class="font-serif" style="font-style:italic; font-size:0.875rem; color:var(--stone-200); line-height:1.6;">' + b.directQuote + '</p>' +
+              '</div>' +
+              '<div>' +
+                '<div style="font-size:0.6875rem; font-weight:700; text-transform:uppercase; margin-bottom:0.25rem;">Refleksi &amp; Pemikiran oleh Arum Dahlia:</div>' +
+                '<p style="font-size:0.75rem; color:var(--stone-700); line-height:1.6;">"' + b.reflectionByArum + '"</p>' +
+              '</div>' +
+            '</div>' +
+            '<div style="margin-top:1.25rem; padding-top:1rem; border-top:1px solid var(--stone-200);" class="stack-xs">' +
+              '<div style="font-size:0.6875rem; font-weight:600; color:var(--stone-500); text-transform:uppercase;">Penerapan Nyata di Brand LYONESSE &amp; Coding:</div>' +
+              '<div class="card" style="padding:0.75rem; font-size:0.75rem; font-weight:500;">' + b.practicalApplication + '</div>' +
+              '<div style="font-size:0.75rem; color:var(--stone-600);">' + b.keyTakeaways.join(' · ') + '</div>' +
+            '</div>' +
+          '</div>';
+        }).join('');
+
+        grid.querySelectorAll('[data-book-id]').forEach((card) => {
+          card.addEventListener('click', () => {
+            selectedBookId = card.getAttribute('data-book-id');
+            renderBooks();
+          });
+        });
+      }
+
+      /* ---------- CONTACT FORM & COPY EMAIL ---------- */
+      document.querySelectorAll('.copy-email-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const text = btn.getAttribute('data-copy');
+          if (navigator.clipboard) navigator.clipboard.writeText(text);
+          const orig = btn.textContent;
+          btn.textContent = '✓ Tersalin';
+          setTimeout(() => { btn.textContent = orig; }, 2000);
+        });
+      });
+
+      document.getElementById('contact-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('c-name').value.trim();
+        const email = document.getElementById('c-email').value.trim();
+        const topic = document.getElementById('c-topic').value;
+        const msg = document.getElementById('c-msg').value.trim();
+        if (!name || !email || !msg) return;
+
+        document.getElementById('contact-form').classList.add('hidden');
+        document.getElementById('contact-success').classList.remove('hidden');
+        document.getElementById('success-title').textContent = 'Terima Kasih, ' + name + '!';
+        document.getElementById('success-body').innerHTML =
+          'Pesan Anda terkait topik <strong>"' + topic + '"</strong> telah tercatat. Anda juga dapat mengirimkan konfirmasi via surel ke ' +
+          '<a class="font-mono" style="text-decoration:underline; font-weight:600;" href="mailto:arumdahlia67@gmail.com?subject=' + encodeURIComponent(topic) + '&body=' + encodeURIComponent(msg) + '">arumdahlia67@gmail.com</a> atau ' +
+          '<a class="font-mono" style="text-decoration:underline; font-weight:600;" href="mailto:lyonessebusiness@gmail.com?subject=' + encodeURIComponent(topic) + '&body=' + encodeURIComponent(msg) + '">lyonessebusiness@gmail.com</a>.';
+      });
+
+      document.getElementById('reset-contact-form').addEventListener('click', () => {
+        document.getElementById('c-msg').value = '';
+        document.getElementById('contact-success').classList.add('hidden');
+        document.getElementById('contact-form').classList.remove('hidden');
+      });
+
+      /* ---------- READING TOOLS BAR, SEARCH, AUDIO, RULER & CV MODAL ---------- */
+      document.querySelectorAll('[data-font-size]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const size = btn.getAttribute('data-font-size');
+          const html = document.documentElement;
+          html.classList.remove('text-size-sm', 'text-size-base', 'text-size-lg');
+          html.classList.add('text-size-' + size);
+          document.querySelectorAll('[data-font-size]').forEach((b) => b.classList.toggle('active', b === btn));
+        });
+      });
+
+      let rulerActive = false;
+      const rulerEl = document.getElementById('reading-ruler');
+      document.getElementById('tools-ruler-btn').addEventListener('click', (e) => {
+        rulerActive = !rulerActive;
+        rulerEl.classList.toggle('active', rulerActive);
+        e.currentTarget.classList.toggle('active', rulerActive);
+      });
+      window.addEventListener('mousemove', (e) => {
+        if (rulerActive) rulerEl.style.top = e.clientY + 'px';
+      });
+
+      let isSpeaking = false, isPaused = false;
+      const narration = 'Halo, selamat datang di portofolio Arum Dahlia. Arum adalah lulusan SMK Negeri 2 Blora tahun 2025 jurusan Akuntansi dan Keuangan Lembaga dengan predikat uji kompetensi Kompeten. Saat ini Arum berfokus merintis brand pakaian LYONESSE bersama rekan dengan material Cotton Combed 20s dan 16s. Arum memanfaatkan kecerdasan buatan sebagai rekan bertukar pikiran untuk merancang solusi web, menghitung titik impas BEP, serta menyusun laporan laba rugi dan jurnal umum akuntansi secara presisi.';
+      const speakBtn = document.getElementById('tools-speak-btn');
+      const speakLabel = document.getElementById('tools-speak-label');
+      const stopBtn = document.getElementById('tools-stop-speak-btn');
+
+      speakBtn.addEventListener('click', () => {
+        if (!('speechSynthesis' in window)) return;
+        if (isSpeaking) {
+          if (isPaused) { window.speechSynthesis.resume(); isPaused = false; speakLabel.textContent = 'Jeda'; }
+          else { window.speechSynthesis.pause(); isPaused = true; speakLabel.textContent = 'Lanjut'; }
+          return;
+        }
+        window.speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance(narration);
+        u.lang = 'id-ID'; u.rate = 0.95;
+        u.onstart = () => { isSpeaking = true; isPaused = false; speakBtn.classList.add('active'); speakLabel.textContent = 'Jeda'; stopBtn.classList.remove('hidden'); };
+        u.onend = u.onerror = () => { isSpeaking = false; isPaused = false; speakBtn.classList.remove('active'); speakLabel.textContent = 'Suara'; stopBtn.classList.add('hidden'); };
+        window.speechSynthesis.speak(u);
+      });
+      stopBtn.addEventListener('click', () => {
+        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+        isSpeaking = false; isPaused = false;
+        speakBtn.classList.remove('active'); speakLabel.textContent = 'Suara'; stopBtn.classList.add('hidden');
+      });
+
+      /* Search Modal */
+      const searchModal = document.getElementById('search-modal');
+      const searchInput = document.getElementById('search-input');
+      const searchResults = document.getElementById('search-results');
+
+      function renderSearchResults(q) {
+        const query = q.trim().toLowerCase();
+        if (!query) {
+          searchResults.innerHTML = '<div style="text-align:center; padding:1.75rem 0; font-size:0.75rem; color:var(--stone-500);"><strong>Ketik kata kunci untuk menemukan informasi dengan cepat.</strong><div style="font-size:0.6875rem; margin-top:4px;">Mencakup brand LYONESSE, kalkulator BEP &amp; laba rugi, prestasi 12 tahun, sertifikasi, dan buku bacaan.</div></div>';
+          return;
+        }
+        const hits = SEARCH_CORPUS.filter((it) =>
+          (it.title + ' ' + it.snippet + ' ' + it.category + ' ' + it.tag).toLowerCase().includes(query)
+        );
+        if (!hits.length) {
+          searchResults.innerHTML = '<div style="text-align:center; padding:1.75rem 0; font-size:0.75rem; color:var(--stone-500);">Tidak ditemukan hasil untuk "' + q + '".</div>';
+          return;
+        }
+        searchResults.innerHTML = hits.map((r) =>
+          '<div class="card search-hit" data-jump="' + r.targetId + '" style="padding:0.75rem; cursor:pointer; display:flex; align-items:center; justify-content:space-between;">' +
+            '<div><div class="font-mono" style="font-size:0.6875rem; color:var(--stone-500);"><strong style="color:var(--stone-900)">' + r.category + '</strong> · ' + r.tag + '</div>' +
+            '<div style="font-size:0.8125rem; font-weight:700;">' + r.title + '</div>' +
+            '<div style="font-size:0.75rem; color:var(--stone-600);">' + r.snippet + '</div></div>' +
+            '<span>→</span>' +
+          '</div>'
+        ).join('');
+        searchResults.querySelectorAll('.search-hit').forEach((el) => {
+          el.addEventListener('click', () => {
+            searchModal.classList.remove('open');
+            navigateTo(el.getAttribute('data-jump'));
+          });
+        });
+      }
+
+      function openSearch() {
+        searchModal.classList.add('open');
+        renderSearchResults(searchInput.value);
+        setTimeout(() => searchInput.focus(), 50);
+      }
+      document.getElementById('tools-open-search').addEventListener('click', openSearch);
+      document.getElementById('close-search-modal').addEventListener('click', () => searchModal.classList.remove('open'));
+      document.getElementById('close-search-footer').addEventListener('click', () => searchModal.classList.remove('open'));
+      searchInput.addEventListener('input', (e) => renderSearchResults(e.target.value));
+      document.querySelectorAll('.search-chip').forEach((c) => {
+        c.addEventListener('click', () => {
+          searchInput.value = c.getAttribute('data-chip');
+          renderSearchResults(searchInput.value);
+        });
+      });
+
+      /* Resume Modal */
+      const resumeModal = document.getElementById('resume-modal');
+      ['open-resume-nav', 'open-resume-mobile', 'open-resume-hero'].forEach((id) => {
+        document.getElementById(id).addEventListener('click', () => {
+          document.getElementById('mobile-menu-panel').classList.add('hidden');
+          resumeModal.classList.add('open');
+        });
+      });
+      ['close-resume-x', 'close-resume-footer'].forEach((id) => {
+        document.getElementById(id).addEventListener('click', () => resumeModal.classList.remove('open'));
+      });
+      document.getElementById('print-resume-btn').addEventListener('click', () => window.print());
+
+      window.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); searchModal.classList.contains('open') ? searchModal.classList.remove('open') : openSearch(); }
+        if (e.key === 'Escape') { searchModal.classList.remove('open'); resumeModal.classList.remove('open'); }
+      });
+
+      /* Mobile Menu & Scroll Progress */
+      document.getElementById('mobile-menu-toggle').addEventListener('click', () => {
+        document.getElementById('mobile-menu-panel').classList.toggle('hidden');
+      });
+      document.getElementById('scroll-top-btn').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+      window.addEventListener('scroll', () => {
+        const doc = document.documentElement;
+        const max = doc.scrollHeight - doc.clientHeight;
+        document.getElementById('scroll-progress').style.width = (max > 0 ? (doc.scrollTop / max) * 100 : 0) + '%';
+      });
+
+      /* Boot */
+      document.getElementById('footer-year').textContent = new Date().getFullYear();
+      renderBooks();
+      applyFabricPreset('20s');
+      navigateTo(parseHash(), false);
+    })();
+  </script>
+</body>
+</html>
